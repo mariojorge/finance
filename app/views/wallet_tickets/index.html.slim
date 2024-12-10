@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Wallet tickets
+
+#wallet_tickets
+  - @wallet_tickets.each do |wallet_ticket|
+    == render wallet_ticket
+    p
+      = link_to "Show this wallet ticket", wallet_ticket
+
+= link_to "New wallet ticket", new_wallet_ticket_path

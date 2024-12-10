@@ -1,0 +1,2 @@
+module WalletTicketsHelper
+end

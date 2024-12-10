@@ -1,0 +1,1510 @@
+pt-BR:
+  create: "Cadastro"
+  update: "Atualização"
+  destroy: "Exclusão"
+  activerecord:
+    models:
+      areas_tematicas: áreas temáticas
+      funcoes: funções
+      micro_regioes: microrregiões
+      orgaos: orgãos
+      dotacoes_destino: dotações de destino
+      dotacoes_origem: dotações de origem
+      previsao_de_despesas: previsão de despesas
+      unidades_orcamentarias: unidades orçamentárias
+      responsavel: responsável
+      sub_areas_tematicas: subáreas temáticas
+      sub_funcoes: subfunções
+      subacao: subação
+      contas_bancarias_por_unidade_orcamentaria: "unidades das gestoras vinculadas"
+      contas_unidade_por_empenho: unidades por empenho vinculadas
+      movimentacoes_da_conta_bancaria: "movimentações"
+      contas_bancarias: "contas bancárias"
+      convenios_contas_bancarias: 'convenios vinculados'
+      agencias: "agências bancárias"
+      engenheiros_da_obra: "engenheiro(s) responsáveis pela obra"
+      empresas_da_obra: "empresa(s) responsáveis pela obra"
+      anulacoes_dos_taloes_de_receita: "anulações neste talão"
+      liquidacoes: "liquidações neste empenho"
+      projecoes_de_despesa: "projeções de despesa"
+      receitas_dos_calculos_de_projecao: "receitas selecionadas para cálculo"
+      calculo_de_projecoes: "receitas com projeções calculadas"
+      tipos_de_indice_por_calculo_de_projecoes: 'receitas com projeções cálculadas com este índice'
+      contabilidade/liquidacao:
+        one: "Liquidação"
+        other: "Liquidações"
+      contabilidade/talao_de_receita: "Talão de receita"
+      contabilidade/imposto_sobre_servico: "ISS"
+      contabilidade/irrf_pessoa_juridica: "IR - PJ"
+      contabilidade/irrf_pessoa_fisica: "IRPF"
+      contabilidade/inss_pessoa_juridica: "INSS - PJ"
+      contabilidade/inss_pessoa_fisica: "INSS - PF"
+      contas_por_eventos_contabeis: 'contas, débito e crédito, relacionadas ao evento'
+      detalhes_do_pagamento: 'detalhamentos do pagamento'
+      estorno_de_pagamento: 'estorno desse pagamento'
+      orcamento: 'orçamento'
+      unidades_orcamentarias_por_natureza_da_receita: 'receitas relacionadas a unidade orçamentária'
+      ordenador_de_despesa: 'ordenadores de despesa'
+      itens_do_pedido: 'itens do pedido'
+      pessoas_dos_projetos: 'Pessoas dos projetos'
+      ordens_de_servico: 'Ordens de Serviço'
+      itens_da_ata: 'Itens da Ata'
+      licitacao: 'Licitação'
+      gestao_de_estoque/devolucao_de_material: 'Devolução de Material'
+      contabilidade/anulacao_do_empenho:
+        one: "Anulação do Empenho"
+        other: "Anulações dos Empenhos"
+      contabilidade/anulacao_do_talao_de_receita:
+        one: "Anulação do Talão de Receita"
+        other: "Anulações dos Talões de Receita"
+      contabilidade/conta_extra_orcamentaria:
+        one: 'Conta Extra Orçámentaria'
+        other: 'Contas Extras Orçámentarias'
+      contabilidade/evento_contabil:
+        one: 'Evento Contábil'
+        other: 'Eventos Contábeis'
+      contabilidade/dotacao_destino:
+        one: 'Dotação'
+        other: 'Dotações'
+      contabilidade/nota_fiscal:
+        one: 'Nota Fiscal'
+        other: 'Notas Fiscais'
+
+    attributes:
+      "ppa_participativo/cidadao":
+        cpf_cnpj: CPF/CNPJ
+        password: Senha
+        password_confirmation: Confirmação de senha
+      "usuario":
+        cpf_cnpj: CPF/CNPJ
+        password: senha
+        password_confirmation: Confirmação de senha
+      orcamento:
+        nao_importado: "Não importado"
+        api_do_tcm: "API do TCM"
+        outros_sistemas: "Outros sistemas"
+      configuracao/tipo:
+        prefeitura: "Prefeitura"
+        camara_municipal: "Câmara"
+      parametrizacao_portal_da_transparencia/tipo_de_poder:
+        prefeitura: "Prefeitura"
+        camara: "Câmara"
+      base/pessoa/porte:
+        mei: "MEI"
+        microempresa: "Microempresa (ME)"
+        pequeno_porte: "Empresa de Pequeno Porte (EPP)"
+        medio_porte: "Empresa de Médio Porte"
+        grande_porte: "Empresa de Grande Porte"
+        osc: "Organização da Sociedade Civil"
+        outros: "Outros"
+      base/categoria/tipo:
+        servico: "Serviço"
+      base/conta_bancaria/tipo_de_conta:
+        conta_nao_vinculada: "Conta não vinculada"
+      base/conta_bancaria/tipo_de_conta_pcasp:
+        conta_caixa: "1.1.1.1.1.01.00 - CAIXA"
+        conta_unica: "1.1.1.1.1.02.00 - CONTA ÚNICA"
+        conta_movimento_plano_financeiro: "1.1.1.1.1.06.02 - BANCOS CONTA MOVIMENTO - PLANO FINANCEIRO"
+        conta_movimento_plano_previdenciario: "1.1.1.1.1.06.03 - BANCOS CONTA MOVIMENTO - PLANO PREVIDENCIÁRIO"
+        conta_movimento_taxa_de_administracao: "1.1.1.1.1.06.04 - BANCOS CONTA MOVIMENTO - TAXA DE ADMINISTRAÇÃO"
+        conta_movimento_demais_contas: "1.1.1.1.1.19.00 - BANCOS CONTA MOVIMENTO - DEMAIS CONTAS"
+      base/agente_publico_municipal/tipo_de_cargo:
+        cargo_prefeito: "Prefeito"
+        cargo_vice_prefeito: "Vice-prefeito"
+        presidente_da_camara: "Presidente da Câmara"
+        secretario: "Secretário"
+        coordenador_ou_gerente_de_fundo: "Coordenador ou Gerente de Fundo"
+        superintendente_de_orgao: "Superintendente de Orgão"
+        presidente_de_orgao: "Presidente de Orgão"
+        cargo_procurador_municipal: "Procurador Municipal"
+        diretor_geral_de_orgao: "Diretor Geral de Orgão"
+        subsecretario: "Subsecretário"
+        coodenador: "Coordenador"
+        diretor: "Diretor"
+        diretor_de_depertamento: "Diretor de Departamento"
+        diretor_de_divisao: "Diretor de Divisão"
+        gerente_de_celula: "Gerente de Célula"
+        diretor_de_nucleo: "Diretor de Núcleo"
+        diretor_de_centro: "Diretor de Centro"
+        diretor_de_funcao: "Diretor de Função"
+        diretor_de_programa: "Diretor de Programa"
+        diretor_de_sub_programa: "Diretor de Sub-programa"
+        gerente_de_projeto: "Gerente de Projeto"
+        coordenador_de_atividade: "Coordenador de Atividade"
+        diretor_de_subfuncao: "Diretor de Subfunção"
+        agente_publico: "Agente Publico"
+        pensionistas: "Pensionista"
+        cargo_vereador: "Vereador"
+        motorista: "Motorista"
+      base/legislacao/lei_federal:
+        lei_8666_93: "Lei 8.666/93"
+        lei_14133_21: "Lei 14.133/21"
+      base/fonte_de_recursos/tipo_de_vinculo:
+        educacao: Educação
+        saude: Saúde
+        previdencia_social_rpps: Previdência Social RPPS
+        previdencia_social_rgps: Previdência Social RGPS
+        assistencia_social: Assistência Social
+        outras_destinacoes: Outras Destinações
+
+      # PPA
+      ppa/ppa/status:
+        aberto: "Aberto"
+        em_votacao: "Em Votação"
+        aprovado: "Aprovado"
+
+      #Portal da Transparencia
+      transparencia/documento/tipo:
+        ppa: "PPA"
+        loa: "LOA"
+        ldo: "LDO"
+
+      #pca
+      pca/acao/tipo_de_contratacao:
+        nova_contratacao: "Nova Contratação"
+        renovacao_prorrogacao: "Renovação/Prorrogação"
+        sem_contrato: "Sem Contrato"
+        renovacao_nova_contratacao: "Renovação/Nova Contratação"
+      pca/acao/categoria_de_despesa:
+        custeio: "Custeio"
+        investimento: "Investimento"
+        custeio_e_investimento: "Custeio e Investimento"
+      pca/acao/forma_de_contratacao_modalidade:
+        processo_licitatorio: "Processo Licitatório"
+        dispensa_de_licitacao: "Dispensa de Licitação"
+        inexibilidade_de_licitacao: "Inexigibilidade de Licitação"
+        carona: "Carona"
+        parceria_osc: "Parceria OSC"
+        credenciamento: "Credenciamento"
+      pca/acao/forma_de_contratacao_modalidade_de_licitacao:
+        pregao: "Pregão Presencial/Eletrônico"
+        concorrencia_publica: "Concorrência Pública"
+        concurso: "Concurso"
+        dialogo_competitivo: "Diálogo Competitivo"
+        chamamento_publico: "Chamamento Público"
+        dispensa_de_chamamento: "Dispensa de Chamamento"
+        inexigibilidade_de_chamamento: "Inexigibilidade de Chamamento"
+        chamada_publica: "Chamada Pública"
+        tomada_de_preco: "Tomada de Preço"
+        nao_de_aplica: "Não se Aplica"
+      pca/tipo_de_despesa_por_acao/tipo_de_despesa:
+        material_de_consumo: "Material de Consumo"
+        material_permanente: "Material Permanente"
+        servico_continuo: "Serviço Contínuo"
+        servico_nao_continuo: "Serviço não Contínuo"
+        solucoes_de_ti: "Soluções de T.I."
+        obras: "Obras"
+        servico_de_engenharia: "Serviços de Engenharia"
+        locacoes_de_imoveis: "Locações de Imóveis"
+        premiacoes: "Premiações Culturais, Artísticas, Científicas, Desportivas e Outros"
+        outros: "Outros"
+
+      # Licitação
+      licitacao/pessoa_do_pedido/tipo_de_responsavel:
+        socio_administrador: "Sócio Administrador"
+        socio_assinatura_em_conjunto: "Sócio Assinatura em Conjunto"
+        representante_outorgado: "Representante Outorgado"
+        outros: "Outros"
+      licitacao/contrato/status:
+        aberto: "Aberto"
+        cancelado: "Cancelado"
+        fechado: "Fechado"
+        enviado_para_controladoria: "Enviado para a Controladoria"
+        enviado_para_copfin: "Enviado para o Copfin"
+        enviado_para_licitacao: "Enviado para a Licitação"
+        confirmado: "Confirmado"
+        rescindido: "Rescindido"
+      licitacao/contrato/tipo_de_contrato:
+        contrato_de_obras: "Contrato de Obras"
+        servico_de_engenharia: "Serviço de Engenharia"
+        outros_contratos: "Outros Contratos"
+        termo_de_colaboracao: "Termo de Colaboração"
+        termo_de_fomento: "Termo de Fomento"
+        acordo_de_cooperacao: "Acordo de Cooperação"
+      licitacao/item_do_pedido/tipo:
+        por_preco: "Por preço"
+      licitacao/lote/criterio_de_julgamento:
+        menor_preco: "Menor Preço"
+        melhor_tecnica: "Melhor Técnica"
+        tecnica_e_preco: "Técnica e Preço"
+        maior_desconto: "Maior Desconto"
+        melhor_tecnica_ou_conteudo_artistico: "Melhor Técnica ou Conteúdo Artístico"
+        nao_se_aplica: "Não se aplica"
+        maior_retorno_economico: "Maior Retorno Econômico"
+        conteudo_artistico: "Conteúdo Artístico"
+      licitacao/projeto/modalidade_do_processo:
+        processo_licitatorio: "Processo Licitatório"
+        dispensa_de_licitacao: "Dispensa de Licitação"
+        inexigibilidade_de_licitacao: "Inexigibilidade de Licitação"
+        parceria_osc: Parceria OSC
+      licitacao/projeto/modalidade_de_licitacao:
+        convite: "Convite"
+        tomada_de_precos: "Tomada de Preços"
+        concorrencia_publica: "Concorrência Pública"
+        concurso: "Concurso"
+        pregao_presencial: "Pregão Presencial"
+        pregao_eletronico: "Pregão Eletrônico"
+        rdc: "RDC"
+        dispensa_ou_inexigibilidade: "Não se aplica"
+        chamamento_publico: "Chamamento Público"
+        chamada_publica: "Chamada Pública"
+        dispensa_de_chamamento: "Dispensa de Chamamento"
+        inexigibilidade_de_chamamento: "Inexigibilidade de Chamamento"
+        carona: "Carona"
+        contratacao_consultoria_individual: "Contratação de Consultoria Individual"
+        dialogo_competitivo: "Diálogo Competitivo"
+      licitacao/projeto/criterio_de_julgamento:
+        menor_preco: "Menor Preço"
+        melhor_tecnica: "Melhor Técnica"
+        tecnica_e_preco: "Técnica e Preço"
+        maior_desconto: "Maior Desconto"
+        melhor_tecnica_ou_conteudo_artistico: "Melhor Técnica ou Conteúdo Artístico"
+        nao_se_aplica: "Não se aplica"
+        maior_retorno_economico: "Maior Retorno Econômico"
+        conteudo_artistico: "Conteúdo Artístico"
+      licitacao/projeto/fundamentacao:
+        artigo_24_inciso_i_dispensa: "Lei 8666, artigo 24, Inciso I. Dispensa Licitação - Aquisição menor valor"
+        artigo_24_inciso_v_dispensa: "Lei 8666, artigo 24, Inciso V. Dispensa - Emergencial"
+        artigo_24_inciso_x_dispensa: "Lei 8666, artigo 24, Inciso X. Dispensa - Locação de imóvel"
+        artigo_25_inciso_v_inexigibilidade: "Lei 8666, artigo 25, Inciso V. Inexigibilidade"
+      licitacao/projeto/lei_federal:
+        lei_8666_93: "8.666/93"
+        lei_14133_21: "14.133/21"
+      licitacao/ordem_de_compra/status:
+        aberto: "Aberto"
+        fechado: "Fechado"
+        enviado_para_almoxarifado: "Enviado para Almoxarifado"
+        recebido_pelo_almoxarifado: "Recebido pelo Almoxarifado"
+        recusado_pelo_almoxarifado: "Recusado pelo Almoxarifado"
+        recebido_parcialmente_pelo_almoxarifado: "Recebido Parcialmente pelo Almoxarifado"
+        devolvido_ao_fornecedor: "Devolvido ao Fornecedor"
+        cancelado: "Cancelado"
+      licitacao/ordem_de_compra/tipo_de_ordem_de_compra:
+        ordem_de_fornecimento: "Ordem de Fornecimento"
+        ordem_de_servico: "Ordem de Serviço"
+      licitacao/modelo_de_documento/modalidade:
+        convite: "Convite"
+        tomada_de_precos: "Tomada de Preços"
+        concorrencia_publica: "Concorrência Pública"
+        concurso: "Concurso"
+        pregao_presencial: "Pregão Presencial"
+        pregao_eletronico: "Pregão Eletrônico"
+        rdc: "RDC"
+        dispensa_de_licitacao: "Dispensa de Licitação"
+        chamamento_publico: "Chamamento Público"
+        chamada_publica: "Chamada Pública"
+        dispensa_de_chamamento: "Dispensa de Chamamento"
+        inexigibilidade_de_chamamento: "Inexigibilidade de Chamamento"
+      licitacao/modelo_de_documento/lei:
+        lei_8666_93: "Lei 8.666/93"
+        lei_14133_21: "Lei 14.133/21"
+      licitacao/projeto/tipo_de_totalizacao:
+        menor_valor: "Menor Preço"
+        valor_medio: "Preço Médio"
+      licitacao/projeto/status:
+        aberto: "Aberto"
+        enviado_para_copfin: 'Aguardando COPFIN'
+        aguardando_autorizacao: 'Aguardando Autorização'
+        aguardando_publicacao: 'Aguardando Publicação'
+        enviado_para_comissao: "Enviado para Comissão"
+        aguardando_homologacao: "Aguardando Homologação"
+        homologado: "Homologado"
+        cancelado: "Cancelado"
+        em_sessao: 'Em Sessão'
+        pos_sessao: 'Pós Sessão'
+      licitacao/processo/status:
+        aberto: "Aberto"
+        homologado: "Homologado"
+        cancelado: "Cancelado"
+      licitacao/comissao/tipo_de_comissao:
+        permanente: "Comissão de Licitação / Contratação Permanente"
+        especial: "Comissão de Licitação / Contratação Especial"
+        comissao_de_selecao: "Comissão de Seleção"
+        comissao_de_monitoramento_e_avaliacao: "Comissão de Monitoramento e Avaliação"
+        equipe_de_apoio: "Equipe de Apoio"
+        agente_de_contratacao: "Agente de Contratação"
+      licitacao/membro_da_comissao/tipo:
+        presidente:
+          padrao: "Presidente da Comissão de Licitação / Contratação"
+          parceria: "Presidente da Comissão de Licitação"
+        membro_comum:
+          padrao: "Membro da Comissão de Licitação / Contratação"
+          parceria: "Membro comum"
+        suplente_exercendo_a_funcao_de_membro:
+          padrao: "Suplente Exercendo a Função de Membro"
+          parceria: "Suplente exercendo a função de membro"
+        agente_de_contratacao:
+          padrao: "Agente de Contratação"
+        pregoeiro:
+          padrao: "Pregoeiro"
+        membro_da_equipe_de_apoio:
+          padrao: "Membro da Equipe de Apoio"
+
+      licitacao/publicacao/tipo_de_publicacao:
+        diario_oficial_da_uniao: "Diário Oficial da União"
+        diario_oficial_do_estado: "Diário Oficial do Estado"
+        diario_oficial_do_municipio: "Diário Oficial do Município"
+        jornal_de_grande_circulacao: "Jornal de Grande Circulação"
+        disponibilizacao_do_edital_de_convite: "Disponibilização do Edital de Convite"
+        outras_publicacoes_do_edital: "Outras Publicações do Edital"
+      licitacao/impugnacao/tipo:
+        edital: "Edital"
+        termo_de_referencia: 'Termo de Referência'
+      licitacao/modelo_de_documento/tipo:
+        ata_de_registro_de_preco: "Ata de Registro de Preço"
+        minuta_do_edital: "Minuta do Edital"
+        minuta_de_contrato: "Minuta de Contrato"
+        minuta_de_ata_de_registro_de_preco: "Minuta de Ata de Registro de Preço"
+        declaracao: "Declaração"
+        solicitacao: "Solicitação"
+        autorizacao: "Autorização"
+        cotacao_por_email: "Cotação por E-mail"
+        termo: "Termo de Autuação"
+        termo_de_referencia: "Termo de Referência"
+        termo_de_paralisacao: "Termo de Paralisação"
+        termo_de_conclusao: "Termo de Conclusão"
+        termo_de_reinicio: "Termo de Reinício"
+        liquidacao: "Liquidação"
+        diaria: "Diária"
+      licitacao/pedido/sintese_do_objeto:
+        combustivel_lubrificante_derivados_do_petroleo: "Combustível/Lubrificantes/Derivados do Petróleo"
+        festividade_evento_comemoracao: "Festividade/Evento/Comemoração"
+        generos_alimenticios: "Gêneros Alimentícios"
+        locacao_de_imoveis: "Locação de Imóveis"
+        locacao_de_maquinas_pesadas: "Locação de Maquinas Pesadas"
+        locacao_de_veiculos: "Locação de Veículos"
+        material_de_construcao: "Material de Construção"
+        material_didatico: "Maerial Didático"
+        medicamento_material_medico_hospitalar: "Medicamento/Material Médico/Material Hospitalar"
+        passagens_aereas: "Passagens Aéreas"
+        pecas_e_pneus: "Peças e Pneus"
+        servicos_de_propaganda_e_ou_publicidade: "Serviços de Propaganda e ou Publicidades"
+        servicos_de_engenharia: "Serviços de Engenharia"
+      licitacao/pedido/status:
+        aberto: "Aberto"
+        cancelado: "Cancelado"
+        aguardando_outras_unidades: "Aguardando outras Unidades"
+        coleta_de_preco: "Coleta de Preço"
+        fechado: "Fechado"
+        projeto_gerado: "Projeto Gerado"
+      licitacao/documento_do_pedido/tipo_de_documento:
+        termo_de_referencia: "Termo de Referência"
+      licitacao/documento_da_cotacao_do_pedido/tipo_de_documento:
+        cotacao_por_email: "Cotação por E-mail"
+      licitacao/documento_do_processo/tipo_de_documento:
+        declaracao: "Declaração"
+        solicitacao: "Solicitação"
+        autorizacao: "Autorização"
+        termo: "Termo de Autuação"
+        minuta_do_edital: "Minuta do Edital"
+        ata_de_registro_de_preco: "Ata de Registro de Preço"
+        minuta_de_contrato: "Minuta de Contrato"
+        minuta_de_ata_de_registro_de_preco: "Minuta de Ata de Registro de Preço"
+        termo_de_referencia: "Termo de Referência"
+      licitacao/documento_da_ata/tipo_de_documento:
+        ata_de_registro_de_preco: "Ata de Registro de Preço"
+      licitacao/documento_do_processo/status_parecer:
+        concluido: "Concluído"
+      licitacao/documento_do_contrato/tipo_de_documento:
+        contrato: "Contrato"
+        termo_de_rescisao: "Termo de Rescisão"
+        termo_aditivo: "Termo Aditivo"
+        termo_de_apostilamento: "Termo de Apostilamento"
+        nota_de_empenho: "Nota de Empenho"
+        relatorio_final_de_contrato: "Relatório Final de Contrato"
+        outros_documento: "Outros Documentos"
+      licitacao/lote/tipo:
+        servico: "Serviço"
+      licitacao/aditivo/modalidade:
+        acrescimo: "Acréscimo de Quantidade"
+        reducao: "Redução de Quantidade"
+        por_prazo: "Por Prazo"
+        prazo_e_reajuste_acrescimo: "Prazo e Reajuste(Acréscimo)"
+        prazo_e_reajuste_decrescimo: "Prazo e Reajuste(Supressão)"
+        nova_unidade_orcamentaria: "Nova Unidade Orçamentária"
+        reajuste_de_valor_acrescimo: "Reajuste de Valor Unitário (Acréscimo)"
+        reajuste_de_valor_decrescimo: "Reajuste de Valor Unitário (Decréscimo)"
+        mudanca_de_item: "Mudança de Item"
+        alteracao_contratual: "Alteração Contratual"
+        rescisao_contratual: "Rescisão Contratual"
+        prazo_e_acrescimo: "Prazo e Acréscimo"
+        prazo_e_reducao: "Prazo e Redução"
+        renovacao: "Renovação"
+      licitacao/ocorrencia/tipo:
+        classificacao: "Classificação"
+        credenciamento: "Credenciamento"
+        suspensao: "Suspensão"
+        habilitacao: "Habilitação"
+        recurso: "Recurso"
+        adjudicacao: "Adjudicação"
+      licitacao/apostilamento/modalidade:
+        dotacao: "Dotação"
+      licitacao/aditivo_da_ata/modalidade:
+        reajuste_de_valor_acrescimo: "Reajuste de Valor (Acréscimo)"
+        reajuste_de_valor_decrescimo: "Reajuste de Valor (Decréscimo)"
+      licitacao/importacao_tcm_processo/modalidade:
+        convite: "Convite"
+        tomada_de_precos: "Tomada de Preços"
+        carona: "Carona"
+        concorrencia_publica: "Concorrência Pública"
+        concurso: "Concurso"
+        pregao_presencial: "Pregão Presencial"
+        pregao_eletronico: "Pregão Eletrônico"
+        rdc: "RDC"
+        dispensa_ou_inexigibilidade: "Não se aplica"
+        chamamento_publico: "Chamamento Público"
+        chamada_publica: "Chamada Pública"
+        dispensa_de_chamamento: "Dispensa de Chamamento"
+        inexigibilidade_de_chamamento: "Inexigibilidade de Chamamento"
+
+      # Contabilidade
+      contabilidade/empenho/status:
+        solicitado: "A Empenhar"
+        aguardando_alteracao_do_orcamento: "Aguardando Alt. do Orçamento"
+      contabilidade/empenho/tipo_de_lancamento:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/empenho/modalidade:
+        ordinario: "Ordinário"
+      contabilidade/percentual_da_alocacao_de_recurso/tipo:
+            titulos_tesouro_nacional_selic: "Títulos Tesouro Nacional Selic - Art. 7º, I, “a”"
+            fi_renda_fixa_tpf: "FI Renda Fixa TPF - Art. 7º, I, “b”"
+            fi_indices_rf_tpf: "FI de Índices de RF TPF - Art. 7º, I, “c”"
+            operacoes_compromissadas: "Operações Compromissadas com Título do TN - Art. 7º, II"
+            fi_renda_fixa: "FI Renda Fixa - Art. 7º, III, “a”"
+            fi_indices_mercado_rf: "FI de Índices de Mercado em Renda Fixa - Art. 7º, III, “b”"
+            ativos_financ_rf_de_emissao_de_if: "Ativos Financeiros de Renda Fixa de Emissão de IF - Art. 7º, IV"
+            fi_direitos_creditorios_senior: "FI em Direitos Creditórios - Cota Sênior - Art. 7º, V, “a”"
+            fi_renda_fixa_credito_privado: "FI Renda Fixa “Crédito Privado” - Art. 7º, V, “b”"
+            fi_debentures_incentivadas: "FI Debêntures Incentivadas - Art. 7º, V, “c”"
+            fi_de_acoes: "FI de Ações - Art. 8º, I"
+            fi_indices_mercado_variavel: "FI em Índices Mercado Variável - Art. 8º, II"
+            fi_renda_fixa_divida_externa: "FI Renda Fixa - Dívida Externa - Art. 9º, I"
+            fi_investimento_no_exterior: "FI Investimento no Exterior - Art. 9º, II"
+            fi_acoes_bdr_nivel_um: "FI Ações - BDR Nível I - Art. 9º, III"
+            fi_multimercado_aberto: "IE - FI Multimercado - Aberto - Art. 10, I"
+            fi_em_participacoes_fechado: "IE - FI em Participações - Fechado - Art. 10, II"
+            fi_acoes_mercado_de_aceso: "IE - FI Ações - Mercado de Acesso - Art. 10, III"
+            fi_imobiliarios: "FI Imobiliários - Art. 11"
+            emprestimo_consignado_gov_zero: "Empréstimo Consignado - Governança 0 - Art. 12, I"
+            emprestimo_consignado_gov_um: "Empréstimo Consignado - Governança 1 a 4 - Art. 12, II"
+            outros: "Outros"
+      contabilidade/empenho/complementacao_da_fonte_de_recurso:
+        sem_complemento: "0000 - Sem Complemento"
+        beneficios_prev_poder_executivo_plano_prev: "1111 - Benefícios previdenciários - Poder Executivo – Plano Previdenciário"
+        beneficios_prev_poder_legislativo_plano_prev: "1121 - Benefícios previdenciários - Poder Legislativo – Plano Previdenciário"
+        beneficios_prev_poder_executivo_plano_financeiro: "2111 - Benefícios previdenciários - Poder Executivo - Plano Financeiro"
+        beneficios_prev_poder_legislativo_plano_financeiro: "2121 - Benefícios previdenciários - Poder Legislativo - Plano Financeiro"
+        transferencia_da_uniao_de_emendas_parlam_individuais: "3110 - Transferências da União decorrentes De emendas parlamentares individuais"
+        transferencia_da_uniao_de_emendas_parlam_de_bancada: "3120 - Transferências da União decorrentes De emendas parlamentares de bancada"
+        transferencia_dos_estados_de_emendas_parlam_individuais: "3210 - Transferências dos Estados decorrentes de emendas parlamentares individuais" 
+        transferencia_dos_estados_de_emendas_parlam_de_bancada: "3220 - Transferências dos Estados decorrentes de emendas parlamentares de bancada"
+      contabilidade/empenho/classificacao_vpd:
+        no_pais: "No País"
+        no_exterior: "No Exterior"
+        pessoal_civil: "Pessoal Cívil"
+        colaboradores_eventuais: "Colaboradores Eventuais"
+        conselheiros: "Conselheiros"
+        premiacoes_culturais: "Premiações Culturais"
+        premiacoes_artisticas: "Premiações Artísticas"
+        premiacoes_cientificas: "Premiações Científicas"
+        premiacoes_desportivas: "Premiações Desportivas"
+        ordens_honorificas: "Ordens Honoríficas"
+        outras_premiacoes: "Outras Premiações"
+        outras: "Outras Diarias"
+      contabilidade/empenho/tipo_de_entidade:
+        federal: "Federal"
+        estadual: "Estadual"
+        outro_municipio: "Outro Município"
+        mesmo_municipio: "Mesmo Município"
+      contabilidade/complemento_por_fonte_do_talao_de_receita/complementacao_da_fonte_de_recurso:
+        sem_complemento: "0000 - Sem Complemento"
+        beneficios_prev_poder_executivo_plano_prev: "1111 - Benefícios previdenciários - Poder Executivo – Plano Previdenciário"
+        beneficios_prev_poder_legislativo_plano_prev: "1121 - Benefícios previdenciários - Poder Legislativo – Plano Previdenciário"
+        beneficios_prev_poder_executivo_plano_financeiro: "2111 - Benefícios previdenciários - Poder Executivo - Plano Financeiro"
+        beneficios_prev_poder_legislativo_plano_financeiro: "2121 - Benefícios previdenciários - Poder Legislativo - Plano Financeiro"
+        transferencia_da_uniao_de_emendas_parlam_individuais: "3110 - Transferências da União decorrentes De emendas parlamentares individuais"
+        transferencia_da_uniao_de_emendas_parlam_de_bancada: "3120 - Transferências da União decorrentes De emendas parlamentares de bancada"
+        transferencia_dos_estados_de_emendas_parlam_individuais: "3210 - Transferências dos Estados decorrentes de emendas parlamentares individuais" 
+        transferencia_dos_estados_de_emendas_parlam_de_bancada: "3220 - Transferências dos Estados decorrentes de emendas parlamentares de bancada"        
+      contabilidade/cancelamento_de_resto_a_pagar/tipo:
+        nao_processado: "Não Processado"
+      contabilidade/cancelamento_de_resto_a_pagar/motivo:
+        insuficiencia_de_saldo_financeiro: "Insuficiência de Saldo Financeiro"
+        prescricao: "Prescrição"
+      contabilidade/membro_do_conselho_do_rpps/representatividade_do_conselho:
+        poder_executivo: "Poder Executivo"
+        poder_legislativo: "Poder Legislativo"
+        servidores_ativos: "Servidores Ativos"
+        servidores_inativos: "Servidores Inativos"
+        outros: "Outros"
+      contabilidade/aporte_despesa/natureza_do_lancamento:
+        aportes_ou_transferencias: "Aportes ou Transferências"
+        despesas_especificas: "Despesas específicas"
+      contabilidade/aporte_despesa/tipo:
+        aporte_para_amortizacao: "Aporte para Amortização de Défict Atuarial"
+        transferencia_para_cobertura: "Transferência para Cobertura de Insuficiência Financeira"
+        transferencia_para_despesas: "Transferência para Despesas Administrativas"
+        outros_aportes_ou_transferencias: "Outros Aportes ou Transferências"
+        despesas_administrativas: "Despesas Administrativas"
+        despesas_previdenciarias: "Despesas Previdenciárias"
+        despesas_com_investimentos: "Despesas com Investimentos"
+      contabilidade/liquidacao/status:
+        solicitado: "A Liquidar"
+        confirmado: "Confirmado"
+        recebido: "Recebido"
+        recebido_pelo_financeiro: "Recebido Setor Financeiro"
+        enviado_para_controladoria: "Enviado para Controladoria"
+        enviado_para_contabilidade: "Enviado para Contabilidade"
+        autorizado: "Autorizado"
+        enviado_para_o_financeiro: "Enviado para o Setor Financeiro"
+        enviado_para_administrativo: "Enviado para o Administrativo"
+      contabilidade/liquidacao/status_restos_a_pagar:
+        processado: "Processado"
+        nao_processado: "Não Processado"
+      contabilidade/liquidacao/tipo_de_lancamento:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/liquidacao/tipo_de_reconhecimento_do_passivo:
+        reconhecido_na_liquidacao_da_despesa: "Reconhecido na Liquidação da Despesa"
+        reconhecimento_pelo_controle_de_consumo: "Reconhecimento pelo Controle de Consumo"
+        reconhecido_antes_da_liquidacao_nesse_exercicio: "Reconhecido Antes da Liquidação - nesse Exercício"
+        reconhecido_antes_da_liquidacao_exercicio_anterior: "Reconhecido Antes da Liquidação - Exercício Anterior"
+        reconhecimento_programado: "Reconhecimento Programado"
+        reconhecimento_eventual: "Reconhecimento Eventual"
+      contabilidade/liquidacao/nota_fiscal_tipo:
+        sem_nota: "Sem Nota"
+        servico: "Serviço"
+        mercadoria: "Mercadoria"
+        mercadoria_avulsa: "Mercadoria Avulsa"
+        mercadoria_produtor: "Mercadoria Produtor"
+        mercadoria_e_servico: "Mercadoria e Serviço"
+        servico_avulsa: "Serviço Avulsa"
+        fatura: "Fatura"
+      contabilidade/conselho_de_rpps/tipo_de_conselho:
+          conselho_fiscal: "Conselho Fiscal"
+          conselho_adiministrativo: "Conselho Administrativo/Previdenciário"
+      contabilidade/nota_fiscal/tipo_da_nota:
+        sem_nota: "0 - Sem Nota"
+        servico: "1 - Serviço"
+        mercadoria: "2 - Mercadoria"
+        mercadoria_avulsa: "3 - Mercadoria Avulsa"
+        mercadoria_produtor: "4 - Mercadoria Produtor"
+        mercadoria_e_servico: "5 - Mercadoria e Serviço"
+        servico_avulsa: "6 - Serviço Avulsa"
+      contabilidade/nota_fiscal/tipo_de_emissao:
+        eletronica_no_padrao_nacional: "Eletrônica no Padrão Nacional"
+        formulario: "Formulário"
+        eletronica_fora_do_padrao_nacional: "Eletrônica Fora do Padrão Nacional"
+        eletronica_sefaz: "Eletrônica SEFAZ"
+        eletronica_consumidor: "Eletrônica Consumidor"
+      contabilidade/decreto/tipo_de_legislacao:
+        oficio: "Ofício"
+        portaria: "Portaria"
+        resolucao: "Resolução"
+        instrucao_normativa: "Instrução Normativa"
+      contabilidade/decreto/funcao_do_instrumento_legal:
+        criacao_do_rpps: "Criação do RPPS"
+        reestruturacao_alteracao: "Reestruturação/Alteração"
+        extincao: "Extinção"
+      contabilidade/convenio_bancario/layout_para_lote:
+        onb: "ONB"
+        cnab240: "CNAB240"
+      contabilidade/ocorrencia_do_empenho/ocorrencia:
+        solicitado: "Solicitado"
+        enviado_para_controladoria: "Enviado para a Controladoria"
+        enviado_para_copfin: "Enviado para CopFin"
+        enviado_para_contabilidade: "Enviado para a Contabilidade"
+        confirmado: "Confirmado"
+        anulado: "Anulado"
+        recebido: "Recebido"
+        enviado_para_administrativo: "Enviado para o Administrativo"
+        aguardando_alteracao_do_orcamento: "Aguardando alteração do Orçamento"
+      contabilidade/ocorrencia_do_empenho/motivo:
+        erro_de_dotacao: "Erro de Dotação"
+        erro_no_historico: "Erro no histórico"
+        contrato: "Contrato"
+        itens_da_solicitacao_de_empenho: "Itens da Solicitação de Empenho"
+        falta_vinculo_com_o_processo_licitatorio: "Falta Vinculo com o Processo Licitatório"
+        outros: "Outros"
+      contabilidade/ocorrencia_da_liquidacao/ocorrencia:
+        solicitado: "A Liquidar"
+        confirmado: "Confirmado"
+        recebido: "Recebido"
+        recebido_pelo_financeiro: "Recebido Setor Financeiro"
+        enviado_para_controladoria: "Enviado para a Controladoria"
+        enviado_para_contabilidade: "Enviado para a Contabilidade"
+        autorizado: "Autorizado"
+        enviado_para_o_financeiro: "Enviado para o Setor Financeiro"
+        enviado_para_administrativo: "Enviado para o Administrativo"
+      contabilidade/ocorrencia_da_liquidacao/motivo:
+        erro_de_dotacao: "Erro de Dotação"
+        erro_no_historico: "Erro no histórico"
+        contrato: "Contrato"
+        itens_da_solicitacao_de_empenho: "Itens da Solicitação de Empenho"
+        falta_vinculo_com_o_processo_licitatorio: "Falta Vinculo com o Processo Licitatório"
+        outros: "Outros"
+      contabilidade/decreto/tipo_de_movimento:
+        transposicao: "Transposição"
+      contabilidade/decreto/tipo_de_credito:
+        credito_extraordinario: "Crédito Extraordinário"
+        credito_suplementar: "Crédito Suplementar"
+        credito_especial: "Crédito Especial"
+      contabilidade/decreto/classificacao:
+        transposicao: "Transposição"
+        transferencias: "Transferências"
+        orcamentario: "Orçamentário"
+      contabilidade/solicitacao_de_alteracao_orcamentaria/origem_do_recurso:
+        anulacao_de_dotacao: "Anulação de Dotação"
+        execesso_de_arrecadacao: "Excesso de Arrecadação"
+        superavit_financeiro: "Superávit Financeiro"
+        revigoramento_de_credito: "Revigoramento de Crédito"
+        operacao_de_credito: "Operação de Crédito"
+      contabilidade/solicitacao_de_alteracao_orcamentaria/tipo_de_credito:
+        credito_extraordinario: "Crédito Extraordinário"
+        credito_suplementar: "Crédito Suplementar"
+        credito_especial: "Crédito Especial"
+        credito_de_reducao: "Crédito de Redução"
+      contabilidade/pagamento/decorrente_de:
+        transporte_de_carga: "Transporte de Carga"
+        transporte_de_passageiros: "Transporte de Passageiros"
+      contabilidade/pagamento/tipo_de_lancamento:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/obra/fonte_de_origem:
+        origem_cef: "CEF"
+        origem_bid: "BID"
+        origem_proprio: "Próprio"
+        origem_operacao_de_credito: "Operação de Cŕedito"
+        origem_convenio_estado: "Convênio Estado"
+        origem_convenio_uniao: "Convênio União"
+      contabilidade/obra/tipo_de_obra:
+        obra: "Obra"
+        servico: "Serviço de Engenharia"
+      contabilidade/obra/fonte_de_contrapartida:
+        contrapartida_cef: "CEF"
+        contrapartida_bid: "BID"
+        contrapartida_proprio: "Próprio"
+        contrapartida_operacao_de_credito: "Operação de Cŕedito"
+      contabilidade/situacao_da_obra/tipo_de_status_da_obra:
+        nao_iniciada: "Não Iniciada"
+        em_andamento: "Em Andamento"
+        paralisada: "Paralisada"
+        concluida_provisoria: "Concluída Provisória"
+        concluida_definitiva: "Concluída Definitiva"
+        tombada: "Concluída Incorporada"
+      contabilidade/contigenciamento/tipo:
+        orcamentario: "Orçamentário"
+      contabilidade/engenheiro_da_obra/tipo:
+        fisca: "Fiscal"
+        responsavel_na_empresa: "Responsável na Empresa"
+        preposto: "Preposto"
+      contabilidade/engenheiro_da_obra/formacao:
+        engenheiro: "Engenheiro"
+        arquiteto: "Arquiteto"
+      contabilidade/documento_da_diaria/tipo_do_documento:
+        certidao: "Certidão"
+      contabilidade/documento_da_liquidacao/tipo_de_documento:
+        liquidacao: "Liquidação"
+      contabilidade/talao_de_receita/origem_do_talao:
+        orcamentario: "Orçamentária"
+        extra_orcamentario: "Extraorçamentária"
+      contabilidade/talao_de_receita/tipo_de_documento:
+        outro_tipo_de_documento_de_credito: "Outro tipo de documento de crédito"
+      contabilidade/talao_de_receita/tipo_do_talao:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/anulacao_do_talao_de_receita/tipo_de_movimento:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/despesa_extra_orcamentaria/tipo_de_documento:
+        outro_tipo_de_documento_de_credito: "Outro tipo de documento de crédito"
+      contabilidade/evento_contabil/tipo:
+        automatico: "Automático"
+        semi_automatico: "Semi-Automático"
+        manual: "Manual"
+        estorno_automatico: Estorno Automático
+        estorno_semi_automatico: "Estorno Semi-Automático"
+        estorno_manual: "Estorno Manual"
+      contabilidade/retencao/tipo_de_acao:
+        pagar: "Pagar"
+        pagar_recolher: "Pagar/Recolher"
+        transferir: "Transferir"
+        nao_selecionar: "Não Selecionar"
+      contabilidade/evento_contabil/classe:
+        previsao_de_receita: "Previsão de Receita"
+        fixacao_da_despesa: "Fixação da Despesa"
+        movimentacao_do_credito_orcamentario: "Movimentação do Crédito Orçamentário"
+        execucao_orcamentaria: "Execução Orçamentária"
+        rotinas_automaticas_de_encerramento: "Rotinas Automáticas de Encerramento"
+        apropriacoes_de_vpd: "Apropriações de VPD"
+        retencoes_e_registros_de_obrigacoes: "Retenções e Registros de Obrigações"
+        liquidacoes_e_baixa_de_obrigacoes: "Liquidações e Baixa de Obrigações"
+        execucao_orcamentaria_da_receita: Execução Orçamentária da Receita
+        apropriacoes_de_bens_e_direitos: "Apropriações de Bens e Direitos"
+        liquidacoes_e_baixa_de_bens_e_direitos: "Liquidações e Baixa de Bens e Direitos"
+        registros_diversos: "Registros Diversos"
+        transferencias_sem_execucao_orcamentaria: "Transferências Financeirias Sem Execução Orçamentária"
+        baixas_das_variacoes_patrimoniais_dim_vpd: "Baixas da Variações Patrimoniais Diminutivas - VPD"
+        classificacoes_de_receitas_e_ingressos_sem_exec_orc: "Classificações de Receitas e Ingressos Sem Execução Orçamentária"
+        controle: "Controle"
+      contabilidade/evento_contabil/tipo_de_fornecedor:
+        pessoa_fisica: "Pessoa Física"
+        pessoa_juridica: "Pessoa Jurídica"
+      contabilidade/evento_contabil/classificacao_tipo_de_material:
+        material_de_expediente: "Material de Expediente"
+        material_de_consumo: "Material de Consumo"
+        generos_alimenticios: "Gêneros Alimentícios"
+        materiais_de_construcao: "Materiais de Construção"
+        autopecas: "Autopeças"
+        medicamentos_e_materiais_hospitalares: "Medicamentos e Materiais Hospitalares"
+        materiais_graficos: "Materiais Gráficos"
+      contabilidade/demonstrativo_de_informacao_previdenciaria/tipo_de_plano:
+        previdenciario: "Previdenciário"
+        financeiro: "Financeiro"
+      contabilidade/lote_bancario/envio_ao_banco:
+        relatorio: "Relatório"
+      contabilidade/lote_bancario/forma_de_pagamento:
+        credito_em_conta: "Crédito em Conta"
+        debito_automatico: "Débito Automático"
+      contabilidade/configuracao_do_evento_contabil/classificacao_vpd:
+        no_pais: "No País"
+        no_exterior: "No Exterior"
+        pessoal_civil: "Pessoal Cívil"
+        colaboradores_eventuais: "Colaboradores Eventuais"
+        conselheiros: "Conselheiros"
+        premiacoes_culturais: "Premiações Culturais"
+        premiacoes_artisticas: "Premiações Artísticas"
+        premiacoes_cientificas: "Premiações Científicas"
+        premiacoes_desportivas: "Premiações Desportivas"
+        ordens_honorificas: "Ordens Honoríficas"
+        outras_premiacoes: "Outras Premiações"
+        outras: "Outras"
+      contabilidade/configuracao_do_evento_contabil/tipo_de_entidade:
+        federal: "Federal"
+        estadual: "Estadual"
+        outro_municipio: "Outro Município"
+        mesmo_municipio: "Mesmo Município"
+      contabilidade/mapeamento_manual/tipo:
+        rreo: "RREO"
+        rgf: "RGF"
+      contabilidade/mapeamento_manual/anexo:
+        anexo_03: "Anexo 3"
+        anexo_06: "Anexo 6"
+        anexo_08: "Anexo 8"
+      contabilidade/mapeamento_manual/linha:
+        transferencia_obg_da_uniao_rel_individual: "( - ) Transferências obrigatórias da União relativas às emendas individuais (art. 166-A, § 1º, da CF) (IV)"
+        transferencia_obg_da_uniao_rel_bancada: "( - ) Transferências obrigatórias da União relativas às emendas de bancada (art. 166, § 16, da CF) (VI)"
+        meta_fiscal_para_o_resultado_primario: "Meta Fiscal para o Resultado Primário"
+        meta_fiscal_para_o_resultado_nominal: "Meta Fiscal para o Resultado Nominal"
+        total_mde_custeada: "22- TOTAL DAS DESPESAS DE MDE CUSTEADAS COM RECURSOS DE IMPOSTOS = L20(d ou e)"
+        total_transferidas_fundeb: "23- TOTAL DAS RECEITAS TRANSFERIDAS AO FUNDEB = (L4)"
+        receita_fundeb: "24- (-) RECEITAS DO FUNDEB NÃO UTILIZADAS NO EXERCÍCIO, EM VALOR SUPERIOR A 10% = L18(q)"
+        superavit_exercicio: "25- (-) SUPERÁVIT PERMITIDO NO EXERCÍCIO IMEDIATAMENTE ANTERIOR NÃO APLICADO NO EXERCÍCIO ATUAL = L19.1(x)"
+        restos_a_pagar_nao_processados: "26- (-) RESTOS A PAGAR NÃO PROCESSADOS INSCRITOS NO EXERCÍCIO SEM DISPONIBILIDADE FINANCEIRA DE RECURSOS DE IMPOSTOS"
+        cancelamento_no_exercicio: "27- (-) CANCELAMENTO, NO EXERCÍCIO, DE RESTOS A PAGAR INSCRITOS COM DISPONIBILIDADE FINANCEIRA DE RECURSOS DE IMPOSTOS VINCULADOS AO ENSINO = (L30.1(af) + L30.2(af))"
+        total_das_despesas: "28- TOTAL DAS DESPESAS PARA FINS DE LIMITE (22 + 23) - (24 + 25 + 26 + 27)"
+        aplicacao_mde: "29- APLICAÇÃO EM MDE SOBRE A RECEITA RESULTANTE DE IMPOSTOS "
+      contabilidade/bloqueio_mensal_do_pcasp/mes_referencia:
+        janeiro: "Janeiro"
+        fevereiro: "Fevereiro"
+        marco: "Março"
+        abril: "Abril"
+        maio: "Maio"
+        junho: "Junho"
+        julho: "Julho"
+        agosto: "Agosto"
+        setembro: "Setembro"
+        outubro: "Outubro"
+        novembro: "Novembro"
+        dezembro: "Dezembro"
+
+      # Gestão de Estoque
+      gestao_de_estoque/almoxarifado/tipo_de_almoxarifado:
+        almoxarifado_central: "Almoxarifado Central"
+        almoxarifado_local: "Almoxarifado Local"
+        centro_de_distribuicao: "Centro de Distribuição"
+        farmacia_central: "Farmácia Central"
+        farmacia_local: "Farmácia Local"
+        patio_de_material_de_construcao: "Pátio de Material de Construção"
+        banco_de_alimentos_central: "Banco de Alimentos Central"
+        banco_de_alimentos_local: "Banco de ALimentos Local"
+        outros: "Outros"
+        patrimonio: "Patrimonio"
+      gestao_de_estoque/consumo/status:
+        aberto: "Aberto"
+        em_atendimento: "Em Atendimento"
+        consumido: "Consumido"
+        enviado_ao_almoxarifado: "Enviado ao Almoxarifado"
+        recebido_pelo_almoxarifado: "Recebido pelo Almoxarifado"
+      gestao_de_estoque/recebimento_de_material/status:
+        aberto: "Aberto"
+        fechado: "Fechado"
+        recebido_parcialmente: "Recebido Parcialmente"
+        recebido: "Recebido"
+        devolvido_ao_fornecedor: "Devolvido ao Fornecedor"
+      gestao_de_estoque/recebimento_de_material/classificacao:
+        doacao: "Doação"
+        devolucao_estorno: "Devolução/Estorno"
+        ajuste_de_inventario: "Ajuste de Inventário"
+        transferencia: "Transferência"
+      gestao_de_estoque/recebimento_de_material/tipo_de_material:
+        consumo: "Consumo"
+        consumo_distribuicao_gratuita: "Consumo - Distribuição Gratuita"
+        permanente: "Permanente"
+      gestao_de_estoque/recebimento_de_material/tipo_de_entrada:
+        definitivo: "Definitivo(a)"
+        provisorio: "Provisório(a)"
+        remoto: "Remoto(a)"
+      gestao_de_estoque/recebimento_de_material/tipo_de_recebimento:
+        parcial: "Parcial"
+        total: "Total"
+      gestao_de_estoque/recebimento_de_material/modalidade_de_licitacao:
+        convite: "Convite"
+        tomada_de_precos: "Tomada de Preços"
+        concorrencia_publica: "Concorrência Pública"
+        concurso: "Concurso"
+        pregao_presencial: "Pregão Presencial"
+        pregao_eletronico: "Pregão Eletrônico"
+        rdc: "RDC"
+        dispensa_ou_inexigibilidade: "Não se aplica"
+        chamamento_publico: "Chamamento Público"
+        chamada_publica: "Chamada Pública"
+        dispensa_de_chamamento: "Dispensa de Chamamento"
+        inexigibilidade_de_chamamento: "Inexigibilidade de Chamamento"
+        carona: "Carona"
+        contratacao_consultoria_individual: "Contratação de Consultoria Individual"
+      gestao_de_estoque/recebimento_de_material/classificacao_tipo_de_material:
+        material_de_expediente: "Material de Expediente"
+        material_de_consumo: "Material de Consumo"
+        generos_alimenticios: "Gêneros Alimentícios"
+        materiais_de_construcao: "Materiais de Construção"
+        autopecas: "Autopeças"
+        medicamentos_e_materiais_hospitalares: "Medicamentos e Materiais Hospitalares"
+        materiais_graficos: "Materiais Gráficos"
+      gestao_de_estoque/comissao/tipo_de_comissao:
+        inventario: "Inventário"
+        desfazimento_de_bens_de_consumo: "Desfazimento de Bens de Consumo"
+        desfazimento_de_bens_permanentes: "Desfazimento de bens Permanentes"
+      gestao_de_estoque/membro_da_comissao/tipo_de_mebro:
+        presidente: "Presidente"
+        membro_comum: "Membro Comum"
+        suplente_exercendo_a_funcao_de_membro: "Suplente Exercendo a Função de Membro"
+      gestao_de_estoque/controle_de_extintor/tipo_de_extintor:
+        agua_pressurizada: "Água Pressurizada"
+        espuma: "Espuma"
+        cloreto_de_sodio: "NaCI (Cloreto de Sódio)"
+        dioximo_de_carbono: "CO2 (Dióximo de Carbono)"
+        po_quimico: "Pó Químico"
+        acetato_de_potassio: "CH3CO2K (Acetato de Potássio)"
+      gestao_de_estoque/controle_de_extintor/prazo_para_inspecao:
+        um_ano: "1 (ano)"
+        dois_anos: "2 (anos)"
+        tres_anos: "3 (anos)"
+        quatro_anos: "4 (anos)"
+        cinco_anos: "5 (anos)"
+      gestao_de_estoque/controle_de_extintor/prazo_para_recarga:
+        um_mes: "1 (mês)"
+        dois_meses: "2 (meses)"
+        tres_meses: "3 (meses)"
+        quatro_meses: "4 (meses)"
+        cinco_meses: "5 (meses)"
+        seis_meses: "6 (meses)"
+        sete_meses: "7 (meses)"
+        oito_meses: "8 (meses)"
+        nove_meses: "9 (meses)"
+        dez_meses: "10 (meses)"
+        onze_meses: "11 (meses)"
+        doze_meses: "12 (meses)"
+      gestao_de_estoque/recebimento_de_material/odor:
+        odor_ruim: "Ruim"
+        odor_regular: "Regular"
+        odor_bom: "Bom"
+      gestao_de_estoque/recebimento_de_material/textura:
+        textura_ruim: "Ruim"
+        textura_regular: "Regular"
+        textura_bom: "Bom"
+      gestao_de_estoque/recebimento_de_material/cor:
+        cor_ruim: "Ruim"
+        cor_regular: "Regular"
+        cor_bom: "Bom"
+      gestao_de_estoque/recebimento_de_material/aspecto_geral:
+        aspecto_geral_ruim: "Ruim"
+        aspecto_geral_regular: "Regular"
+        aspecto_geral_bom: "Bom"
+      gestao_de_estoque/recebimento_de_material/condicao_da_embalagem:
+        rasgada_furada: "Rasgada/Furada"
+        amassada: "Amassada"
+        bom_estado: "Bom estado"
+
+      # Administrativo
+      administrativo/requisicao_de_material/tipo_de_material:
+        consumo: "Consumo"
+        consumo_distribuicao_gratuita: "Consumo - Distribuição Gratuita"
+        permanente: "Permanente"
+      administrativo/requisicao_de_material/classificacao:
+        doacao: "Doação"
+        devolucao_estorno: "Devolução/Fornecedor"
+        ajuste_de_inventario: "Ajuste de Inventário"
+        transferencia: "Transferência"
+      administrativo/requisicao_de_material/tipo_de_requisicao:
+        comum: "Comum"
+        demanda_programada: "Demanda Programada"
+      administrativo/requisicao_de_material/classificacao_tipo_de_material:
+        material_de_expediente: "Material de Expediente"
+        material_de_consumo: "Material de Consumo"
+        generos_alimenticios: "Gêneros Alimentícios"
+        materiais_de_construcao: "Materiais de Construção"
+        autopecas: "Autopeças"
+        medicamentos_e_materiais_hospitalares: "Medicamentos e Materiais Hospitalares"
+        materiais_graficos: "Materiais Gráficos"
+
+      # Obra
+      obra/documento_da_obra/tipo_de_documento:
+        termo_de_paralisacao: "Termo de Paralisação"
+        termo_de_conclusao: "Termo de Conclusão"
+        outros_documentos: "Outros Documentos"
+        termo_de_reinicio: "Termo de Reinício"
+      obra/documento_da_obra/tipo_de_termo:
+        permanente: "Permanente"
+        provisorio: "Provisório"
+      obra/verificacao_da_fiscalizacao/tipo:
+        geral: "Geral"
+        orientacao: "Orientação"
+        questionamento: "Questionamento"
+        solicitacao: "Solicitação"
+      obra/verificacao_da_fiscalizacao/situacao:
+        atendido: "Atendido"
+        atendido_parcial: "Atendido Parcial"
+        nao_atendido: "Não Atendido"
+        em_atendimento: "Em Atendimento"
+        outro: "Outro"
+        nao_se_aplica: "Não se Aplica"
+      obra/garantia_da_obra/forma_de_garantia:
+        caucao_em_dinheiro: "Caução em Dinheiro"
+        caucao_em_titulo_de_divida: "Caução em Título de Dívida"
+        seguro: "Seguro"
+        fianca_bancaria: "Fiança Bancária"
+      obra/garantia_da_obra/situacao:
+        aberta: "Em Aberta"
+        devolvida: "Devolvida"
+      obra/transferencia/tipo:
+        transferencia: "Transferência"
+        convenio: "Convênio"
+      obra/transferencia/modalidade:
+        automatica: "Automática"
+        sus: "SUS"
+        fnde: "FNDE"
+        fnas: "FNAS"
+        convenio_sus: "Convênio SUS"
+        convenio_exceto_sus: "Convênio exceto SUS"
+        contrato_de_repasse: "Contrato de Repasse"
+        outros: "Outros"
+      obra/transferencia/status:
+        pendente_finalizar_cadastro: "Pendente Finalizar Cadastro"
+        aguardando_inicio_da_execucao: "Aguardando Início da Execução"
+        em_execucao: "Em Execução"
+        em_execucao_aditado: "Em Execução Aditado"
+        executado: "Executado"
+        aguardando_prestacao_de_contas: "Aguardando Prestação de Contas"
+        prestado_contas: "Prestado Contas"
+        expirado: "Expirado"
+      obra/transferencia/esfera:
+        federal: "Federal"
+        estadual: "Estadual"
+        municipal: "Municipal"
+      obra/transferencia/informacao_complementar:
+        transferencia_individual: "3110 - Transferência da União Emenda Parlamentar Individual"
+        transferencia_bancada: "3120 - Transferência da União Emenda Parlamentar de bancada"
+        sem_complemento: 0000 - Sem Complemento
+      obra/pre_convenio/modalidade:
+        convenio_sus: "Convênio SUS"
+        convenio_exceto_sus: "Convênio exceto SUS"
+        contrato_de_repasse: "Contrato de Repasse"
+      contabilidade/solicitacao_de_alteracao_orcamentaria/status:
+        enviado_ao_planejamento: "Enviado ao Planejamento"
+        pre_confirmado: "Pré Confirmado"
+        solicitado: "Solicitado"
+        confirmado: "Confirmado"
+      obra/operacao_de_credito/modalidade:
+        operacao_credito_interna: "Operação de Crédito Interna"
+        operacao_credito_externa: "Operação de Crédito Externa"
+        operacao_credito_interna_mod_adm_publica: "Operação de Crédito Interna - Melhoria Adm. Pública"
+        operacao_credito_externa_mod_adm_publica: "Operação de Crédito Externa - Melhoria Adm. Pública"
+      obra/operacao_de_credito/status:
+        pendente_finalizar_cadastro: "Pendente Finalizar Cadastro"
+        aguardando_inicio_da_execucao: "Aguardando Início da Execução"
+        em_execucao: "Em Execução"
+        executado: "Executado"
+        expirado: "Expirado"
+      obra/aditivo_do_convenio/modalidade:
+        por_prazo: "Por Prazo"
+        valor: "Valor"
+      obra/diario_de_obra/tempo_manha:
+        tempo_manha_nublado: "Nublado"
+        tempo_manha_claro: "Claro"
+        tempo_manha_ensolarado: "Ensolarado"
+        tempo_manha_chuvoso: "Chuvoso"
+        tempo_manha_quente: "Quente"
+        tempo_manha_umido: "Úmido"
+        tempo_manha_frio: "Frio"
+        tempo_manha_seco: "Seco"
+      obra/diario_de_obra/tempo_tarde:
+        tempo_tarde_nublado: "Nublado"
+        tempo_tarde_claro: "Claro"
+        tempo_tarde_ensolarado: "Ensolarado"
+        tempo_tarde_chuvoso: "Chuvoso"
+        tempo_tarde_quente: "Quente"
+        tempo_tarde_umido: "Úmido"
+        tempo_tarde_frio: "Frio"
+        tempo_tarde_seco: "Seco"
+      obra/diario_de_obra/tempo_noite:
+        tempo_noite_nublado: "Nublado"
+        tempo_noite_claro: "Claro"
+        tempo_noite_chuvoso: "Chuvoso"
+        tempo_noite_quente: "Quente"
+        tempo_noite_umido: "Úmido"
+        tempo_noite_frio: "Frio"
+        tempo_noite_seco: "Seco"
+      obra/diario_de_obra/condicao_manha:
+        condicao_manha_praticavel: "Praticável"
+        condicao_manha_impraticavel: "Impraticável"
+      obra/diario_de_obra/condicao_tarde:
+        condicao_tarde_praticavel: "Praticável"
+        condicao_tarde_impraticavel: "Impraticável"
+      obra/diario_de_obra/condicao_noite:
+        condicao_noite_praticavel: "Praticável"
+        condicao_noite_impraticavel: "Impraticável"
+      obra/atividade_rdo/status:
+        nao_executada: "Não Executada"
+        em_andamento: "Em Andamento"
+        finalizada: "Finalizada"
+      obra/fiscalizacao/qualidade_da_execucao:
+        qualidade_otima: "Ótima"
+        qualidade_boa: "Boa"
+        qualidade_regular: "Regular"
+        qualidade_ruim: "Ruim"
+      obra/fiscalizacao/desempenho_da_construtora:
+        desempenho_otimo: "Ótimo"
+        desempenho_bom: "Bom"
+        desempenho_regular: "Regular"
+        desempenho_ruim: "Ruim"
+      contabilidade/medicao_da_obra/status:
+        aberta: "Em Aberta"
+        enviada_a_cef: "Enviado a CEF"
+        liberada_pela_cef: "Liberada pela CEF"
+        confirmada: "Confirmada"
+      contabilidade/conta_extra_orcamentaria/codigo_sim:
+        salario_familia: "SALÁRIO FAMÍLIA"
+        salario_maternidade: "SALÁRIO MATERNIDADE"
+        contribuicao_previdenciaria_regime_proprio: "CONTRIBUIÇÃO PREVIDENCIÁRIA - REGIME PRÓPRIO"
+        contribuicao_previdenciaria_inss:  "CONTRIBUIÇÃO PREVIDENCIÁRIA - INSS"
+        pasep: "PASEP"
+        iss: "ISS"
+        irrf: "IRRF"
+        aro: "ARO"
+        outros: "OUTROS"
+      contabilidade/conta_extra_orcamentaria/tipo_de_conta:
+        conta_extra: "Conta Extra"
+        conta_extra_intra_orcamentaria: "Conta Extra Intra Orçamentária"
+      contabilidade/liquidacao/mes_de_competencia:
+        janeiro_competencia: "Janeiro"
+        fevereiro_competencia: "Fevereiro"
+        marco_competencia: "Março"
+        abril_competencia: "Abril"
+        maio_competencia: "Maio"
+        junho_competencia: "Junho"
+        julho_competencia: "Julho"
+        agosto_competencia: "Agosto"
+        setembro_competencia: "Setembro"
+        outubro_competencia: "Outubro"
+        novembro_competencia: "Novembro"
+        dezembro_competencia: "Dezembro"
+      contabilidade/liquidacao/mes_da_folha:
+        janeiro: "Janeiro"
+        fevereiro: "Fevereiro"
+        marco: "Março"
+        abril: "Abril"
+        maio: "Maio"
+        junho: "Junho"
+        julho: "Julho"
+        agosto: "Agosto"
+        setembro: "Setembro"
+        outubro: "Outubro"
+        novembro: "Novembro"
+        dezembro: "Dezembro"
+      contabilidade/demonstrativo_de_informacao_previdenciaria/mes_de_competencia:
+        janeiro: "Janeiro"
+        fevereiro: "Fevereiro"
+        marco: "Março"
+        abril: "Abril"
+        maio: "Maio"
+        junho: "Junho"
+        julho: "Julho"
+        agosto: "Agosto"
+        setembro: "Setembro"
+        outubro: "Outubro"
+        novembro: "Novembro"
+        dezembro: "Dezembro"
+      contabilidade/conta/ente_que_utiliza:
+        uniao: "União"
+        estado: "Estado"
+        municipio: "Município"
+        todos_os_entes: "União/Estado/Município"
+      contabilidade/conta/informacao_complementar:
+        nao_se_aplica: "Não se aplica"
+        po: "PO"
+        po_fp: "PO - FP"
+        po_fp_fr: "PO - FP - FR"
+        po_fp_dc_fr: "PO - FP - DC - FR"
+        po_fr: "PO - FR"
+        po_fr_cf_nr: "PO - FR - CF - NR"
+        po_fs_fr_cf_nd_es: "PO - FS - FR - CF - ND - ES"
+        po_fs_fr_cf_nd_es_ai: "PO - FS - FR - CF - ND - ES - AI"
+      contabilidade/transferencia_financeira/documento_bancario:
+        outro: "Outro Tipo de Documento"
+      contabilidade/transferencia_financeira/tipo_de_transferencia:
+        repasse_de_duodecimo_da_camara: "Repasse de Duodécimo da Câmara"
+        recebimento_de_duodecimo_da_camara: "Recebimento de Duodécimo da Câmara"
+        transferencia_entre_contas_mesma_ug: "Transferência Entre Contas - Mesma UG"
+        concessao_de_transferencia_para_execucao_orcamentaria: "Concessão de Transferência p/Execução Orçamentária"
+        recebimento_de_transferencia_para_execucao_orcamentaria: " Recebimento de Transferência p/Execução Orçamentária"
+        concessao_transferencia_para_execucao_extraorcamentaria_e_restos_a_pagar: "Concessão Transferência p/Execução Extraorç. e R. a Pagar"
+        recebimento_de_transferencia_para_execucao_extraorcamentaria_e_restos_a_pagar: "Recebimento de Transferência p/Execução Extraorç. e R a Pagar"
+        concessao_de_transferencia_para_aporte_de_recursos_ao_rpps: "Concessão de Transferência p/Aporte de Recursos ao RPPS"
+        recebimento_de_transferencia_para_aporte_de_recursos_ao_rpps: "Recebimento de Transferência p/Aporte de Recursos ao RPPS"
+        devolucao_de_duodecimo_da_camara: "Devolução de Duodécimo da Câmara"
+      contabilidade/transferencia_financeira/tipo_de_plano_financeiro:
+        recursos_para_cobertura_insuficiencias_financeiras: "Recursos para Cobertura de Insuficiências Financeiras"
+        recursos_para_formacao_de_reserva: "Recursos para Formação de Reserva"
+        outros_aportes_para_o_rpps: "Outros Aportes para o RPPS"
+      contabilidade/transferencia_financeira/tipo_de_plano_previdenciario:
+        recusos_para_cobertura_de_deficit_financeiro: "Recursos para Cobertura de Déficit Financeiro"
+        recursos_para_cobertura_de_deficit_aportes: "Recursos para Cobertura de Déficit Atuarial - Aportes Periódicos"
+        recursos_para_cobertura_de_deficit_aliquota: "Recursos para Cobertura de Déficit Atuarial- Alíquota Suplementar"
+        outros_aportes_para_o_rpps_prev: "Outros Aportes para o RPPS"
+      contabilidade/transferencia_financeira/tipo_de_movimento:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/transferencia_nao_financeira/tipo_de_movimento:
+        original: "Regular"
+        estorno: "Estorno"
+      contabilidade/anulacao_da_conta_extra/motivo_do_cancelamento:
+        consolidacao: "Consolidação"
+      base/agente_publico_municipal/ingresso_sistema_publico_municipal:
+        nomeacao_de_cargo_efetivo: "Nomeação de cargo efetivo"
+        admissao_em_emprego_publico: "Admissão em emprego público"
+        nomeacao_de_cargo_comissionado: "Nomeação de cargo comissionado"
+        estágio_ou_bolsa: "Estagio ou bolsa"
+        eleição: "Eleição"
+        beneficiario_de_pensao: "Beneficiadio de pensão"
+        convenio: "Convênio"
+        ingresso_por_cargo_político_administrativo: "Ingresso por cargo político administrativo"
+        contratacao_temporaria: "Contratação Temporária (autônomos)"
+      base/agente_publico_municipal/tipo_relacao_servico_publico:
+        emprego_publico: "Emprego público"
+        estágiario_ou_bolsista: "Estagiario ou bolsita"
+        prestação_de_serviço: "Prestação de serviço"
+        cargo_efetivo_atividade_adicional: "Cargo efetivo(atividade adicional)"
+        emprego_público_atividade_adicional: "Emprego público(atividade adicional)"
+        prestação_de_serviço_atividade_adicional: "Prestação de serviço(atividade adicional)"
+        regime_especial_atividade_adicional: "Regime especial(atividade adicional) "
+      tcm/lote/tipo:
+        orcamento: Orçamento
+        licitacao: Licitação
+        contabilidade: Contabilidade
+        todos: Todos
+        outros: Outros
+      tcm/erros_do_lote/tipo:
+        orcamento: Orçamento
+        licitacao: Licitação
+        contabilidade: Contabilidade
+        todos: Todos
+        outros: Outros
+      configuracao/tipo_de_acesso:
+        nao_monitorado: "Não Monitorado"
+
+
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          one: Não é possível excluir o registro pois existe um %{record} dependente
+          many: Não é possível excluir o registro pois existem %{record} dependentes
+        in_between: "deve ter entre %{min} e %{max}"
+        spoofed_media_type: "tem uma extensão que não corresponde ao seu conteúdo"
+
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Terça-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mês
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  errors:
+    format: "%{message}"
+    messages:
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: não é igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      model_invalid: 'A validação falhou: %{errors}'
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      required: deve existir
+      taken: já está em uso
+      too_long:
+        one: 'é muito longo (máximo: 1 caracter)'
+        other: 'é muito longo (máximo: %{count} caracteres)'
+      too_short:
+        one: 'é muito curto (mínimo: 1 caracter)'
+        other: 'é muito curto (mínimo: %{count} caracteres)'
+      wrong_length:
+        one: não possui o tamanho esperado (1 caracter)
+        other: não possui o tamanho esperado (%{count} caracteres)
+      other_than: deve ser diferente de %{count}
+    template:
+      body: 'Por favor, verifique o(s) seguinte(s) campo(s):'
+      header:
+        one: 'Não foi possível gravar %{model}: 1 erro'
+        other: 'Não foi possível gravar %{model}: %{count} erros'
+  helpers:
+    select:
+      prompt: Por favor selecione
+    submit:
+      create: Criar %{model}
+      submit: Salvar %{model}
+      update: Atualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ''
+      format:
+        delimiter: "."
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: "."
+        format: "%n%"
+    precision:
+      format:
+        delimiter: "."
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+    pm: ''
+
+  configuracao_elemento_da_despesa:
+    nao: "Não"
+    sim: "Sim"
+    geralmente_nao: "Geralmente não"
+    geralmente_sim: "Geralmente sim"
+
+  status_do_orcamento:
+    gerando_dependencias: Gerando Dependências
+    conferindo_geracao: Conferindo Geração
+    aberto: Aberto
+    enviado_para_votacao: Enviado Para Votação
+    em_alteracao: Em Alteração
+    aprovado: Aprovado
+    encerrado: Encerrado
+
+  enum_ish:
+    contabilidade/transferencia_de_saldo_pcasp:
+          indicador_do_superavit_financeiro:
+            financeiro: Financeiro
+            permanente: Permanente
+    patrimonio/bem_patrimonial:
+      estado_do_bem:
+        novo: Novo
+        bom: Bom
+        regular: Regular
+        pessimo: Péssimo
+        ocioso: Ocioso
+        recuperavel: Recuperável
+        antieconomico: Antieconômico
+        inservivel_irrecuperavel: Inservível/Irrecuperável
+    patrimonio/dados_extras_do_bem:
+      estado_do_bem:
+        novo: Novo
+        bom: Bom
+        regular: Regular
+        pessimo: Péssimo
+        ocioso: Ocioso
+        recuperavel: Recuperável
+        antieconomico: Antieconômico
+        inservivel_irrecuperavel: Inservível/Irrecuperável
+
+  aberto: Aberto
+  cancelado: Cancelado
+  confirmado: Confirmado
+  solicitado: Solicitado
+  cedido: Cedido
+  enviado_para_controladoria: Enviado para Controladoria
+  abrir_para_outras_unidades: Abrir para Outras Unidades
+  aguardando_outras_unidades: Aguardando Outras Unidades
+  coleta_de_preco: Solicitar Coleta de Preço
+  coletar_precos: Solicitar Coleta de Preços
+  fechado: Fechado
+  projeto_gerado: Projeto Gerado
+  enviado_para_almoxarifado: Enviado p/ Almoxarifado
+  enviado_ao_almoxarifado: Enviado ao Almoxarifado
+  recebido_pelo_almoxarifado: Recebido
+  recusado_pelo_almoxarifado: Recusado
+  recebido_parcialmente_pelo_almoxarifado: Recebido Parcialmente
+  em_atendimento: 'Em atendimento'
+  atendido: 'Atendido(a)'
+  atendido_parcialmente: 'Atendido(a) Percialmente'
+  recusado: 'Recusado(a)'
+  devolvido_ao_almoxarifado: 'Devolvido ao Almoxarifado'
+  devolvido_ao_fornecedor: 'Devolvido ao Fornecedor'

@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Ticket moviments
+
+#ticket_moviments
+  - @ticket_moviments.each do |ticket_moviment|
+    == render ticket_moviment
+    p
+      = link_to "Show this ticket moviment", ticket_moviment
+
+= link_to "New ticket moviment", new_ticket_moviment_path

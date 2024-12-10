@@ -1,0 +1,10 @@
+p style="color: green" = notice
+
+== render @ticket_moviment
+
+div
+  => link_to "Edit this ticket moviment", edit_ticket_moviment_path(@ticket_moviment)
+  '|
+  =< link_to "Back to ticket moviments", ticket_moviments_path
+
+  = button_to "Destroy this ticket moviment", @ticket_moviment, method: :delete

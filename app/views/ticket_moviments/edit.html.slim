@@ -1,0 +1,10 @@
+h1 Editing ticket moviment
+
+== render "form", ticket_moviment: @ticket_moviment
+
+br
+
+div
+  => link_to "Show this ticket moviment", @ticket_moviment
+  '|
+  =< link_to "Back to ticket moviments", ticket_moviments_path

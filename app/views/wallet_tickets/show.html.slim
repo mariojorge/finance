@@ -1,0 +1,33 @@
+p style="color: green" = notice
+
+div id="#{dom_id @wallet_ticket}"
+  h3 align="center" = "#{@wallet_ticket.wallet.name} - #{@wallet_ticket.ticket.name}"
+
+.grid style="margin-bottom: 20px"
+  div
+  div
+  div
+    => link_to "Back to Wallet", wallet_path(@wallet_ticket.wallet)
+    '|
+    => link_to "Edit this ticket", edit_ticket_path(@wallet_ticket.ticket)
+    '|
+    = link_to "Destroy this wallet ticket", @wallet_ticket, method: :delete
+
+h4 Compras
+
+= link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=compra", method: :get
+
+== render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 1
+
+h4 Vendas
+
+= link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=venda", method: :get
+
+= render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 2
+
+h4 Dividendos
+
+= link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=lucro", method: :get
+
+= render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 3
+

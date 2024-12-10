@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  moviment_type: 1
+  moviment_date: 2024-12-08
+  institution: MyString
+  wallet_ticket_id: 
+  quantity: 1
+  price: 9.99
+  com_date: 2024-12-08
+
+two:
+  moviment_type: 1
+  moviment_date: 2024-12-08
+  institution: MyString
+  wallet_ticket_id: 
+  quantity: 1
+  price: 9.99
+  com_date: 2024-12-08

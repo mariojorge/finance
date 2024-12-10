@@ -1,0 +1,20 @@
+table
+  tr
+    th width="10%" = "Data"
+    th width="40%" = "Instituição"
+    th width="10%" = "Quantidade"
+    th width="10%" = "Preço"
+    th width="10%" = "Total"
+    - if moviment_type == 1
+      th width="10%" = "Lucro/Prejuízo"
+      th width="10%" = "Rendimento"
+  - wallet_ticket.ticket_moviments.where(moviment_type: moviment_type).order(moviment_date: :desc).each do |ticket_moviment|
+    tr
+      td = ticket_moviment.moviment_date.strftime("%d/%m/%Y")
+      td = ticket_moviment.institution
+      td = ticket_moviment.quantity
+      td = ticket_moviment.price.to_f.contabil
+      td = ticket_moviment.total.to_f.contabil
+      - if moviment_type == 1
+        td
+        td

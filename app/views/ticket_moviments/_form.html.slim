@@ -1,0 +1,25 @@
+= simple_form_for ticket_moviment do |form|
+  = form.input :wallet_ticket_id, as: :hidden
+  = form.input :moviment_type, as: :hidden
+
+  - if ticket_moviment.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(ticket_moviment.errors.count, "error")} prohibited this ticket_moviment from being saved:"
+      ul
+        - ticket_moviment.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.input :moviment_date
+
+  div
+    = form.input :institution
+
+  div
+    = form.input :quantity
+
+  div
+    = form.input :price
+
+  div
+    = form.submit

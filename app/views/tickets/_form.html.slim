@@ -1,0 +1,16 @@
+= simple_form_for ticket do |form|
+  - if ticket.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(ticket.errors.count, "error")} prohibited this ticket from being saved:"
+      ul
+        - ticket.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.input :name
+
+  div
+    = form.input :ticket_class
+
+  div
+    = form.submit

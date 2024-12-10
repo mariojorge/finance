@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wallet_id: MyString
+  ticket_id: MyString
+  average_price: 9.99
+
+two:
+  wallet_id: MyString
+  ticket_id: MyString
+  average_price: 9.99

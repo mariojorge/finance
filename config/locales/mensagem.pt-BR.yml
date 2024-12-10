@@ -1,0 +1,94 @@
+pt-BR:
+  titulos:
+    cotacao_externa: "A empresa %{empresa_nome pessoa_do_pedido.empresa_nome} preencheu cotação para o pedido %{numero_do_pedido item_do_pedido.pedido.numero} através do email."
+    setor_licitacao_novo_projeto: "Um novo projeto de licitação foi criado."
+    unidade_principal_sessao_processo_concluido: "A sessão do processo %{numero_do_processo} foi concluída"
+    setor_de_compras_pedido_enviado_para_cotacao_de_preco: "O pedido de numero %{numero} foi enviado para cotação de preços."
+    unidades_convidadas: "A unidade %{unidade_orcamentaria_nome} foi convidada a participar de uma licitação"
+    pedido_retornou_da_cotacao_de_preco: "O pedido %{numero} retornou da cotação de preços."
+    complementacao_de_pedido_pela_unidade: "A unidade %{unidade_convidada_nome} preencheu quantidades no pedido %{numero}"
+    envia_projeto_para_controladoria: O projeto %{numero} foi enviado para a Controladoria
+    retorno_projeto_da_controladoria: O projeto %{numero} retornou da Controladoria
+    projeto_autorizado: O projeto %{numero} foi autorizado
+    envia_projeto_para_parecer: O projeto %{numero} foi encaminhado para o parecer
+    parecer_concluido: O parecer do processo %{numero_do_processo} foi concluído
+    enviado_ao_planejamento: A Solicitação de Alteração Orçamentária do %{texto} %{id} foi enviada ao planejamento
+    fechamento_de_contrato: "O Contrato %{numero_do_contrato} com Fornecedor %{nome_do_fornecedor} foi fechado"
+    ata_confirmada: "A Ata de Registro de Preço %{numero_da_ata} foi confirmada"
+    empenho_confirmado: "O Empenho %{numero_do_empenho} da Unidade Orçamentária %{unidade_orcamentaria} foi confirmado"
+    liquidacao_confirmada: "A Liquidacao %{numero_da_liquidacao} do Empenho %{numero_do_empenho_e_fornecedor} foi confirmada"
+    processo_homologado: "O Processo %{numero_do_processo} foi homologado"
+    parecer_da_procuradoria: "A procuradoria emitiu um parecer %{status} para %{identificacao}"
+    convite_para_registro_de_preco: "%{unidade_original} convida %{unidade_convidada} para o registro de preços"
+    transferencia_a_confirmar: "Há uma nova Transferência Financeira para %{unidade_orcamentaria_da_conta_de_destino}"
+    obra_nao_classificada: "Há uma nova Obra não classificada"
+
+  mensagens:
+    cotacao_externa: "Verifique os detalhes da cotação <a href='%{url_aplicacao}/licitacao/pedidos/%{pedido_id}'>clicando aqui</a>."
+    setor_licitacao_novo_projeto:  "Você pode verificar o projeto <a href='%{url_aplicacao}/licitacao/projetos/%{id}'>clicando aqui</a>."
+    unidade_principal_sessao_processo_concluido: "Você pode verificar o resultados e continuar o processo <a href='%{url_aplicacao}/licitacao/processos/%{id}'>clicando aqui</a>."
+    setor_de_compras_pedido_enviado_para_cotacao_de_preco: "Verifique o pedido e adicione cotações <a href='%{url_aplicacao}/licitacao/pedidos/%{id}'>clicando aqui</a>."
+    unidades_convidadas: "
+				<strong>Objeto da licitação:</strong> %{objeto} </br></br>
+				<strong>Unidade gerenciadora:</strong> %{unidade_orcamentaria_nome}.</br>
+				A data limite para envio da complementação do pedido é %{data_limite_para_complementacao}.</br></br>
+        Para acessar, <a href='%{url_aplicacao}/licitacao/pedidos/%{id}'>clique aqui</a>.
+      "
+    pedido_retornou_da_cotacao_de_preco: "Você pode verificar os detalhes da cotação e continuar o processo do pedido <a href='%{url_aplicacao}/licitacao/pedidos/%{id}'>clicando aqui</a>."
+    complementacao_de_pedido_pela_unidade: "Você pode verificar o pedido %{numero} <a href='%{url_aplicacao}/licitacao/pedidos/%{id}'>clicando aqui</a>."
+    envia_projeto_para_controladoria: "Você pode verificar o projeto <a href='%{url_aplicacao}/controladoria/projetos/%{id}'>clicando aqui</a>."
+    retorno_projeto_da_controladoria: "Você pode verificar o projeto <a href='%{url_aplicacao}/licitacao/projetos/%{id}'>clicando aqui</a>."
+    projeto_autorizado: "Você pode verificar o projeto <a href='%{url_aplicacao}/licitacao/projetos/%{id}'>clicando aqui</a>."
+    envia_projeto_para_parecer: Voĉe pode verificar e dar o parecer <a href='%{url_aplicacao}/licitacao/documentos_do_processo'>clicando aqui</a>."
+    parecer_concluido: Voĉe pode verificar <a href='%{url_aplicacao}/licitacao/documentos_do_processo/%{id}'>clicando aqui</a>."
+    enviado_ao_planejamento: Voĉe pode verificar <a href='%{url_aplicacao}/contabilidade/solicitacao_de_alteracao_orcamentarias/%{id}'>clicando aqui</a>."
+    fechamento_de_contrato: "
+    <p>Informações</p>
+    <ul>
+      <li>Nº do Contrato %{numero_do_contrato}</li>
+      <li>Unidade Orçamentária %{nome_da_unidade_orcamentaria}</li>
+      <li>Fornecedor: %{nome_do_fornecedor}</li>
+      <li>Final da Vigência: %{fim_da_vigencia}</li>
+      <li>Dias até final da vigência: %{dias_ate_final_da_vigencia} dia(s)</li>
+    </ul>
+    <p>Você pode acessá-lo <a href='%{url_aplicacao}/licitacao/contratos/%{contrato_id}'>clicando aqui</a></p>"
+    ata_confirmada: "
+    <p>Informações:</p>
+      <ul>
+        <li>Número: %{numero_da_ata}</li>
+        <li>Data Final da Vigência %{data_final}</li>
+        <li>Dias até final da vigência: %{tempo_restante} dia(s)</li>
+      </ul>
+    <p>Você pode acessá-lo <a href='%{url_aplicacao}/licitacao/atas_de_registro_de_precos/%{ata_id}'>clicando aqui</a></p>"
+    empenho_confirmado: "
+      <p>Informações:</p>
+      <ul>
+        <li>Número do Empenho %{numero_do_empenho}</li>
+        <li>Fornecedor: %{nome_do_fornecedor}</li>
+        <li>Valor: %{valor_contratado}</li>
+      </ul>
+      <p>Você pode acessá-lo <a href='%{url_aplicacao}/empenhos/%{id_empenho}'>clicando aqui</a></p>"
+    liquidacao_confirmada: "
+      <p>Informações:</p>
+      <ul>
+        <li>Nº da Liquidação: %{numero_da_liquidacao}</li>
+        <li>Nº do Empenho: %{numero_do_empenho}</li>
+        <li>Fornecedor: %{nome_do_fornecedor}</li>
+        <li>Unidade Orçamentária: %{unidade_orcamentaria}</li>
+        <li>Nota Fiscal: %{nota_fiscal}</li>
+      </ul>
+      <p>Você pode acessá-lo <a href='%{url_aplicacao}/contabilidade/liquidacoes/%{id_liquidacao}'>clicando aqui</a></p>"
+    processo_homologado: "<p>Você pode acessá-lo <a href='%{url_aplicacao}/licitacao/processos/%{id_processo}'>clicando aqui</a></p>"
+    parecer_da_procuradoria: "
+    %{informacoes_extras}
+    <p>Você pode acessá-lo <a href='%{url_aplicacao}%{caminho}'>clicando aqui</a></p>"
+    convite_para_registro_de_preco: "<p>Você pode acessá-lo <a href='%{url_aplicacao}%{caminho}'>clicando aqui</a></p>"
+    transferencia_a_confirmar: "
+      <p>Informações</p>
+      <ul>
+        <li>Unidade Orçamentária de Origem: %{unidade_orcamentaria_da_conta_origem}</li>
+        <li>Data da Transferência: %{data_da_transferencia}</li>
+        <li>Valor: R$ %{valor_da_transferencia}</li>
+      </ul>
+      <p>Você pode acessá-la <a href='%{url_aplicacao}/contabilidade/transferencias_financeiras/%{id_da_transferencia}'>clicando aqui</a></p>"
+    obra_nao_classificada: "<p>Você pode acessá-la <a href='%{url_aplicacao}/contabilidade/obras/%{id}'>clicando aqui</a></p>"
