@@ -7,49 +7,58 @@ div id="#{dom_id @wallet}"
     =< @wallet.description
 
 .grid style="margin-bottom: 20px"
-  div
-  div
-  div
-    => link_to "Add Ticket", new_wallet_ticket_path + "?wallet_id=#{@wallet.id}", method: :get
-    '|
-    => link_to "Edit this wallet", edit_wallet_path(@wallet)
-    '|
-    => link_to "Back to wallets", wallets_path
-    '|
-    =< link_to "Destroy this wallet", @wallet, method: :delete
+  .row
+    .col-md-12
+      .pull-right
+        => link_to "Voltar", wallets_path, class: "btn btn-dark btn-sm"
+        => link_to "Adicionar Ticker", new_wallet_ticket_path + "?wallet_id=#{@wallet.id}", method: :get, class: "btn btn-success btn-sm"
+        => link_to "Editar Carteira", edit_wallet_path(@wallet), class: "btn btn-primary btn-sm"
+        =< link_to "Apagar Carteira", @wallet, method: :delete, data: { confirm: "Tem certeza?" }, class: "btn btn-danger btn-sm"
 
-- tickets = @wallet.wallet_tickets.select { |wallet_ticket| wallet_ticket.quantity > 0 }
+- tickets = @wallet.wallet_tickets.where(finished: [false, nil])
 
 - unless tickets.empty?
 
   - tickets.sort_by { |wallet_ticket| wallet_ticket.ticket.ticket_class.to_s }.group_by { |wallet_ticket| wallet_ticket.ticket.ticket_class }.each do |ticket, wallet_tickets|
-    h3 = ticket.to_s.humanize.upcase
-    table
-      tr
-        th Ticket
-        th Quantidade
-        th Preço médio
-        th Preço atual
-        th Investimento
-        th Patrimônio
-        th Percentual de lucro
-        th Lucro
-        th Dividendos
-        th Lucro Final Perc.
-        th Lucro Final
-      - wallet_tickets.select { |wallet_ticket| wallet_ticket.quantity > 0 }.each do |wallet_ticket|
-        tr
-          td = link_to wallet_ticket.ticket.name, wallet_ticket_path(wallet_ticket)
-          td = wallet_ticket.quantity
-          td = wallet_ticket.average_price.to_f.contabil
-          td = wallet_ticket.current_price.to_f.contabil
-          td = wallet_ticket.total_invested.to_f.contabil
-          td = wallet_ticket.stock_equity.to_f.contabil
-          td style="color: #{wallet_ticket.profit_percent > 0 ? "green" : "red"}" #{wallet_ticket.profit_percent.to_f.round(2).to_s.gsub(".", ",")}%
-          td style="color: #{wallet_ticket.profit > 0 ? "green" : "red"}" = wallet_ticket.profit.to_f.contabil
-          td = wallet_ticket.dividends.to_f.contabil
-          td style="color: #{wallet_ticket.final_profit_percent > 0 ? "green" : "red"}" #{wallet_ticket.final_profit_percent.to_f.round(2).to_s.gsub(".", ",")}%
-          td style="color: #{wallet_ticket.final_profit > 0 ? "green" : "red"}" = wallet_ticket.final_profit.to_f.contabil
+    .card
+      .card-header
+        h4 = ticket.to_s.humanize.upcase
+      .card-body
+        table.table
+          tr
+            th Ticker
+            th Quantidade
+            th Preço médio
+            th Preço atual
+            th Investimento
+            th Patrimônio
+            th Percentual de lucro
+            th Lucro
+            th Dividendos
+            th Lucro Final Perc.
+            th Lucro Final
+            th
+          - wallet_tickets.select { |wallet_ticket| !wallet_ticket.finished? }.each do |wallet_ticket|
+            tr
+              td = link_to wallet_ticket.ticket.name, wallet_ticket_path(wallet_ticket)
+              td = wallet_ticket.quantity
+              td = wallet_ticket.average_price.to_f.contabil
+              td 
+                => wallet_ticket.current_price.to_f.contabil
+                - if wallet_ticket.current_variation.to_d > 0
+                  i class="fa fa-arrow-up text-success"
+                - elsif wallet_ticket.current_variation.to_d < 0
+                  i class="fa fa-arrow-down text-danger"
+                span style="font-size: 12px" (#{wallet_ticket.current_variation.to_f.round(2).to_s.gsub(".", ",")} %)
+              td = wallet_ticket.total_invested.to_f.contabil
+              td = wallet_ticket.stock_equity.to_f.contabil
+              td style="color: #{wallet_ticket.profit_percent.to_d > 0 ? "green" : "red"}" #{wallet_ticket.profit_percent.to_f.round(2).to_s.gsub(".", ",")}%
+              td style="color: #{wallet_ticket.profit.to_d > 0 ? "green" : "red"}" = wallet_ticket.profit.to_f.contabil
+              td = wallet_ticket.dividends.to_f.contabil
+              td style="color: #{wallet_ticket.final_profit_percent.to_d > 0 ? "green" : "red"}" #{wallet_ticket.final_profit_percent.to_f.round(2).to_s.gsub(".", ",")}%
+              td style="color: #{wallet_ticket.final_profit.to_d > 0 ? "green" : "red"}" = wallet_ticket.final_profit.to_f.contabil
+              td
 
-div
-  
+div style="margin-bottom: 20px"
+
+

@@ -10,7 +10,7 @@
           li = error.full_message
 
   div
-    = form.input :moviment_date
+    = form.input :moviment_date, as: :string, input_html: { class: 'datepicker' }
 
   div
     = form.input :institution
@@ -19,7 +19,8 @@
     = form.input :quantity
 
   div
-    = form.input :price
+    = form.input :price, as: :string, input_html: { class: 'auto-numeric' }
 
   div
-    = form.submit
+    => form.submit "Salvar", class: 'btn btn-success'
+    = link_to "Voltar", wallet_ticket_path(ticket_moviment.wallet_ticket), class: 'btn btn-dark'

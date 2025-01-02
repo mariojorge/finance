@@ -1,8 +1,7 @@
-h1 New wallet
-
-== render "form", wallet: @wallet
-
-br
-
-div
-  = link_to "Back to wallets", wallets_path
+.row
+  .col-md-12
+    .card
+      .card-title
+        h4 Nova Carteira
+      .card-body
+        == render "form", wallet: @wallet

@@ -75,6 +75,8 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
+    attribute-defaults (0.6.0)
+      activerecord (>= 3.0.0)
     awesome_print (1.9.2)
     base64 (0.2.0)
     bcrypt_pbkdf (1.1.1)
@@ -376,6 +378,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  attribute-defaults
   awesome_print
   bootsnap
   brakeman

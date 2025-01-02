@@ -4,30 +4,42 @@ div id="#{dom_id @wallet_ticket}"
   h3 align="center" = "#{@wallet_ticket.wallet.name} - #{@wallet_ticket.ticket.name}"
 
 .grid style="margin-bottom: 20px"
-  div
-  div
-  div
-    => link_to "Back to Wallet", wallet_path(@wallet_ticket.wallet)
-    '|
-    => link_to "Edit this ticket", edit_ticket_path(@wallet_ticket.ticket)
-    '|
-    = link_to "Destroy this wallet ticket", @wallet_ticket, method: :delete
+  .row
+    .col-md-12
+      .pull-right
+        => link_to "Voltar", wallet_path(@wallet_ticket.wallet), class: "btn btn-dark"
+        => link_to "Editar Ticker", edit_ticket_path(@wallet_ticket.ticket), class: "btn btn-primary"
+        = link_to "Remover da Carteira", @wallet_ticket, method: :delete, class: "btn btn-danger"
 
-h4 Compras
+.card
+  .card-body
+    h5 Preço Atual: #{@wallet_ticket.current_price.to_f.contabil}
+    .profile-tab style="margin-top: 20px"
+      .custom-tab-1
+        ul.nav.nav-tabs
+          li.nav-item
+            a.nav-link.active.show href="#purchases" data-toggle="tab" Compras (#{@wallet_ticket.ticket_moviments.compra.size})
+          li.nav-item
+            a.nav-link href="#sales" data-toggle="tab" Vendas (#{@wallet_ticket.ticket_moviments.venda.size})
+          li.nav-item
+            a.nav-link href="#dividends" data-toggle="tab" Dividendos (#{@wallet_ticket.ticket_moviments.lucro.size})
+        .tab-content
+          #purchases.tab-pane.fade.active.show
+            .row
+              .col-md-12
+                .pull-right style="margin: 20px 0px"
+                  = link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=compra", method: :get, class: "btn btn-primary"
+                = render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 1
+          #sales.tab-pane.fade
+            .row
+              .col-md-12
+                .pull-right style="margin: 20px 0px"
+                  = link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=venda", method: :get, class: "btn btn-primary"
+                = render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 2
+          #dividends.tab-pane.fade
+            .row
+              .col-md-12 style="margin: 20px 0px"
+                = link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=lucro", method: :get, class: "btn btn-primary"
+                = render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 3
 
-= link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=compra", method: :get
-
-== render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 1
-
-h4 Vendas
-
-= link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=venda", method: :get
-
-= render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 2
-
-h4 Dividendos
-
-= link_to "Adicionar", new_ticket_moviment_path + "?wallet_ticket_id=#{@wallet_ticket.id}&moviment_type=lucro", method: :get
-
-= render "table_moviment", wallet_ticket: @wallet_ticket, moviment_type: 3
 

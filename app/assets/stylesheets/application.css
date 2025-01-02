@@ -8,3 +8,15 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+//= require assets/css/lib/calendar2/semantic.ui.min.css
+//= require assets/css/lib/chartist/chartist.min.css
+//= require assets/css/lib/font-awesome.min.css
+//= require assets/css/lib/themify-icons.css
+//= require assets/css/lib/owl.carousel.min.css
+//= require assets/css/lib/owl.theme.default.min.css
+//= require assets/css/lib/weather-icons.css
+//= require assets/css/lib/menubar/sidebar.css
+//= require assets/css/lib/bootstrap.min.css
+//= require assets/css/lib/helper.css
+//= require assets/css/style.css

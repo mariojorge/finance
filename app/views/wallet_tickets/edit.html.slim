@@ -1,8 +1,7 @@
-h1 Editing wallet ticket
-
-== render "form", wallet_ticket: @wallet_ticket
-
-br
-
-div
-  =< link_to "Back to wallet", @wallet_ticket.wallet
+.row
+  .col-md-12
+    .card
+      .card-title
+        h4 Editar Ticker
+      .card-body
+        == render "form", wallet_ticket: @wallet_ticket

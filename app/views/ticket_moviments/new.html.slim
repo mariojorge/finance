@@ -1,8 +1,7 @@
-h1 Adicionar movimentação à #{ @ticket_moviment.wallet_ticket.ticket.name }
-
-== render "form", ticket_moviment: @ticket_moviment
-
-br
-
-div
-  = link_to "Back to Wallet ticket", @ticket_moviment.wallet_ticket
+.row
+  .col-md-12
+    .card
+      .card-title
+        h4 Adicionar movimentação à #{ @ticket_moviment.wallet_ticket.ticket.name }
+      .card-body
+        == render "form", ticket_moviment: @ticket_moviment

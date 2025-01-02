@@ -1,11 +1,29 @@
 p style="color: green" = notice
 
-h1 Wallets
+.row
+  .col-md-12
+    .pull-right
+      = link_to "Nova Carteira", new_wallet_path, class: "btn btn-success btn-sm"
 
-#wallets
-  - @wallets.each do |wallet|
-    == render wallet
-    p
-      = link_to "Show this wallet", wallet
-
-= link_to "New wallet", new_wallet_path
+.row
+  .col-md-12
+    .card
+      .card-title
+        h4 Carteiras
+      .card-body
+        table.table
+          thead
+            tr
+              th width="10%" #
+              th Nome
+              th Valor Investido
+              th Saldo
+              th
+          tbody
+            - @wallets.each do |wallet| 
+              tr
+                td = wallet.id
+                td align="left" = link_to wallet.name, wallet
+                td = wallet.invested_total.real_contabil
+                td = wallet.stock_equity_total.real_contabil
+                td

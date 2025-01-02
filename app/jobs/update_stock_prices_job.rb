@@ -4,7 +4,7 @@ require 'json'
 class UpdateStockPricesJob < ApplicationJob
   queue_as :default
 
-  API_URL = 'https://brapi.dev/api/quote'.freeze
+  API_URL = 'https://brapi.dev/api/quote/list'.freeze
   API_TOKEN = 'bDF4U5u6oDN5Ysp4K6bCcg'.freeze # Substitua pelo seu token de autenticação
 
   def perform

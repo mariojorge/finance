@@ -9,7 +9,11 @@
           li = error.full_message
 
   div
-    = form.input :ticket_id, collection: Ticket.all
+    label class="mr-sm-2" Ticker
+    .row
+      .col-md-3
+        = form.input :ticket_id, collection: Ticket.all.order(name: :asc), label: false, input_html: { class: 'custom-select ', style: 'width: 100%' }
 
   div
-    = form.submit
+    => form.submit "Salvar", class: 'btn btn-success'
+    = link_to "Voltar", wallet_path(wallet_ticket.wallet), class: 'btn btn-dark'

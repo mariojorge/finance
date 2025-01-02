@@ -52,7 +52,7 @@ class WalletTicketsController < ApplicationController
     @wallet_ticket.destroy!
 
     respond_to do |format|
-      format.html { redirect_to wallet_tickets_path, status: :see_other, notice: "Wallet ticket was successfully destroyed." }
+      format.html { redirect_to @wallet_ticket.wallet, status: :see_other, notice: "Wallet ticket was successfully destroyed." }
       format.json { head :no_content }
     end
   end

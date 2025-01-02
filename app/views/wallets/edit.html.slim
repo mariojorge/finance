@@ -1,8 +1,11 @@
-h1 Editing wallet
+.row
+  .col-md-12
+    .card
+      .card-title
+        h4 Editar Carteira
+      .card-body
+        == render "form", wallet: @wallet
 
-== render "form", wallet: @wallet
-
-br
 
 div
   => link_to "Show this wallet", @wallet

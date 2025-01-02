@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_10_003617) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_12_003735) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -41,6 +41,16 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_10_003617) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "current_price", precision: 18, scale: 2
+    t.boolean "finished"
+    t.decimal "total", precision: 18, scale: 2
+    t.decimal "total_invested", precision: 18, scale: 2
+    t.decimal "stock_equity", precision: 18, scale: 2
+    t.decimal "profit", precision: 18, scale: 2
+    t.decimal "profit_percent", precision: 18, scale: 2
+    t.decimal "dividends", precision: 18, scale: 2
+    t.decimal "final_profit", precision: 18, scale: 2
+    t.decimal "final_profit_percent", precision: 18, scale: 2
+    t.decimal "current_variation", precision: 10, scale: 2
   end
 
   create_table "wallets", force: :cascade do |t|

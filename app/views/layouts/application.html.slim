@@ -15,11 +15,107 @@ html
     link rel='icon' href='/icon.png' type='image/png'
     link rel='icon' href='/icon.svg' type='image/svg+xml'
     link rel='apple-touch-icon' href='/icon.png'
+    link[rel="shortcut icon" href="http://placehold.it/64.png/000/fff"]
+    link[rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff"]
+    link[rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff"]
+    link[rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff"]
+    link[rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff"]
 
-    link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.violet.min.css"
+    /link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.violet.min.css"
     = stylesheet_link_tag :app, 'data-turbo-track': 'reload'
-    = javascript_importmap_tags
+    = stylesheet_link_tag 'https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css'
 
   body
-    .container-fluid
-      = yield
+    .sidebar.sidebar-hide-to-small.sidebar-shrink.sidebar-gestures
+      .nano
+        .nano-content
+          ul
+            .logo
+              a href="index.html"
+                span Invest
+            li.label Main
+            li.active
+              a.sidebar-sub-toggle
+                i.ti-home
+                | Dashboard
+                span.badge.badge-primary 2
+                span.sidebar-collapse-icon.ti-angle-down
+              ul
+                li
+                  a href="index.html" Dashboard 1
+                li
+                  a href="index1.html" Dashboard 2
+
+            li.label Apps
+            li
+              = link_to wallets_path do
+                i class="fa fa-briefcase"
+                | Carteiras
+
+              = link_to tickets_path do
+                i.ti-layout-grid2-alt
+                | Tickers
+            
+
+    .header
+      .container-fluid
+        .row
+          .col-lg-12
+            .float-left
+              .hamburger.sidebar-toggle
+                span.line
+                span.line
+                span.line
+            .float-right
+              ul
+                li.header-icon.dib
+                  i.ti-bell
+                  .drop-down
+                    .dropdown-content-heading Recent Notifications
+                    .dropdown-content-body
+                      ul
+                        li
+                          a href="#"
+                            img.pull-left.m-r-10.avatar-img src="assets/images/avatar/3.jpg" alt=""
+                            .notification-content
+                              small.notification-timestamp.pull-right 02:34 PM
+                              .notification-heading Mr. John
+                              .notification-text 5 members joined today
+                        li.text-center
+                          a.more-link See All
+
+    .content-wrap
+      .main
+        .container-fluid
+          == yield
+
+    = javascript_importmap_tags
+    = javascript_include_tag '/js/lib/jquery.min.js'
+    = javascript_include_tag 'https://cdn.jsdelivr.net/npm/jquery-ujs@1.2.3/src/rails.min.js'
+    = javascript_include_tag '/js/lib/jquery.nanoscroller.min.js'
+    = javascript_include_tag '/js/lib/menubar/sidebar.js'
+    = javascript_include_tag '/js/lib/preloader/pace.min.js'
+    = javascript_include_tag '/js/lib/calendar-2/moment.latest.min.js'
+    = javascript_include_tag '/js/lib/calendar-2/semantic.ui.min.js'
+    = javascript_include_tag '/js/lib/calendar-2/prism.min.js'
+    = javascript_include_tag '/js/lib/calendar-2/pignose.calendar.min.js'
+    = javascript_include_tag '/js/lib/calendar-2/pignose.init.js'
+    = javascript_include_tag '/js/lib/weather/jquery.simpleWeather.min.js'
+    = javascript_include_tag '/js/lib/weather/weather-init.js'
+    = javascript_include_tag '/js/lib/circle-progress/circle-progress.min.js'
+    = javascript_include_tag '/js/lib/circle-progress/circle-progress-init.js'
+    = javascript_include_tag '/js/lib/chartist/chartist.min.js'
+    = javascript_include_tag '/js/lib/chartist/chartist-init.js'
+    = javascript_include_tag '/js/lib/sparklinechart/jquery.sparkline.min.js'
+    = javascript_include_tag '/js/lib/sparklinechart/sparkline.init.js'
+    = javascript_include_tag '/js/lib/owl-carousel/owl.carousel.min.js'
+    = javascript_include_tag '/js/lib/owl-carousel/owl.carousel-init.js'
+    = javascript_include_tag '/vendor/global/global.min.js'
+    = javascript_include_tag 'https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js'
+    = javascript_include_tag '/js/autonumeric/dist/autoNumeric.min.js'
+    = javascript_include_tag '/js/quixnav-init.js'
+    = javascript_include_tag '/js/custom.min.js'
+    = javascript_include_tag '/js/scripts.js'
+    = javascript_include_tag '/js/my_scripts.js'
+
+      

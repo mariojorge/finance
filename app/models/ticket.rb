@@ -1,5 +1,5 @@
 class Ticket < ApplicationRecord
-  has_many :wallet_tickets
+  has_many :wallet_tickets, dependent: :destroy
 
   validates :name, presence: true
 

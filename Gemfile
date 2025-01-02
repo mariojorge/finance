@@ -71,3 +71,4 @@ gem 'brazilian-rails'
 gem 'enum_help'
 gem 'roo'
 gem 'whenever', require: false
+gem 'attribute-defaults'
